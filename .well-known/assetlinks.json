@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.evidence.diagnostic",
+      "sha256_cert_fingerprints": ["2E:5A:5D:5C:01:36:C2:4D:04:B5:56:14:7A:7C:83:ED:74:17:D1:C2:EE:8D:7C:0D:A7:70:D9:BB:6F:DF:87:76"]
+    }
+  }
+]
