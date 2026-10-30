@@ -10,52 +10,68 @@
   <title>Connect your phone — Evidence Recorder</title>
   <link rel="icon" href="../icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="connect.css">
+  <link rel="stylesheet" href="connect.css?v=20261030">
   <script src="../site-config.js?v=0.9-invitation-links" defer></script>
-  <script src="../main.js" defer></script>
-  <script src="connect.js" defer></script>
+  <script src="../main.js?v=20261030" defer></script>
+  <script src="connect.js?v=20261030" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header wrap">
-    <a class="wordmark" href="../">Evidence Recorder</a>
-    <nav aria-label="Main navigation"><a class="nav-install" href="../#how-it-works">How it works ↗</a></nav>
-  </header>
-  <main id="main" class="wrap invitation-page">
-    <section aria-labelledby="invite-title">
-      <p class="eyebrow">Private invitation · Android 11 or later</p>
-      <h1 id="invite-title">Connect your phone.</h1>
-      <p class="hero-description">One invitation connects one phone to private cloud backup. Opening this page does not use your invitation.</p>
-      <div class="invitation-panel" role="status" aria-live="polite">
-        <h2 id="invitation-status">Private invitation needed</h2>
-        <p id="invitation-detail">Open the complete private link supplied by the app owner. Enable JavaScript to check its status here.</p>
+  <a id="skip-content" class="skip-link" href="#main">Skip to content</a>
+  <header class="connect-header wrap"><a class="wordmark" href="../">Evidence Recorder</a></header>
+  <main id="main" class="wrap invitation-page" tabindex="-1">
+    <section class="invitation-card" aria-labelledby="invite-title">
+      <h1 id="invite-title">Connect your phone</h1>
+      <div class="invitation-status" role="status" aria-live="polite">
+        <span id="invitation-status">Private invitation needed</span>
+        <p id="invitation-detail">Open the full invitation link sent to you. Enable JavaScript to continue.</p>
       </div>
-      <div class="hero-actions"><a id="connect-phone" class="button primary" aria-disabled="true">Connect this phone</a></div>
-      <p class="fine-print">Already installed? This button opens the connection screen; tap <strong>Connect</strong> there to confirm. It does not start a recording.</p>
-      <div id="manual-fallback" class="manual-fallback" hidden>
-        <h3>If the app does not open</h3>
-        <p>Open <strong>Evidence Recorder Dev</strong> → <strong>Connect this phone</strong>, and enter:</p>
-        <code id="manual-code" translate="no"></code>
-        <p class="fine-print">Keep this code, link and QR code private. Anyone who has an unused invitation can connect a phone.</p>
-      </div>
-    </section>
-    <section class="invitation-install" aria-labelledby="install-title">
-      <p class="section-number">First-time setup</p>
-      <h2 id="install-title">Install, then return here.</h2>
-      <div class="download-panel">
-        <a id="apk-download" class="button primary download-button" aria-disabled="true">Download Android APK ↓</a>
-        <p id="download-note">The download will appear when the app release is available.</p>
-        <p id="download-meta" class="fine-print" hidden></p>
-      </div>
-      <ol class="invitation-steps">
-        <li>Open the downloaded APK. If asked, allow installation from your browser, then tap <strong>Install</strong>. Keep Android security checks enabled.</li>
-        <li>Return to this same invitation page. Tap <strong>Connect this phone</strong>, then confirm in the app. Alternatively, enter the code above manually.</li>
-        <li>Wait for <strong>Phone connected</strong>. Complete the app’s camera, microphone, notification and battery steps. Choose your recording quality and email settings.</li>
+      <ol id="connection-steps" class="connection-steps" hidden>
+        <li>
+          <span class="step-number" aria-hidden="true">1</span>
+          <div class="step-body">
+            <h2>Install the app</h2>
+            <a id="apk-download" class="button primary" data-layout="compact" aria-disabled="true">Download app</a>
+            <p id="download-meta" class="step-note" hidden></p>
+            <p id="download-note" class="step-note" role="status" hidden>Install the downloaded file. Then return here.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-number" aria-hidden="true">2</span>
+          <div class="step-body">
+            <h2>Connect your phone</h2>
+            <a id="connect-phone" class="button secondary" aria-disabled="true">Open app</a>
+            <p class="step-note">Tap <strong>Connect</strong> in the app to finish.</p>
+          </div>
+        </li>
       </ol>
-      <p class="fine-print">If Android reports an incompatible update, keep the existing app and contact the owner. Do not uninstall while recordings or uploads are pending.</p>
-      <p class="section-note"><a href="../#install">Full installation guide</a> · <a href="../#data">Data use and recording tips</a></p>
+      <div id="connection-help" class="connection-help" hidden>
+        <details id="install-help">
+          <summary>Need help?</summary>
+          <div>
+            <ol>
+              <li>Open the downloaded APK.</li>
+              <li>If asked, allow installation from your browser.</li>
+              <li>Tap <strong>Install</strong>.</li>
+              <li>Return here and tap <strong>Open app</strong>.</li>
+            </ol>
+            <p>Already installed? Go straight to step 2.</p>
+            <p><strong>Do not uninstall an existing copy while uploads are pending.</strong> If Android rejects the update, contact the app owner.</p>
+            <p><a href="../#install">Full installation guide</a></p>
+          </div>
+        </details>
+        <details id="manual-fallback" hidden>
+          <summary>Use a code instead</summary>
+          <div>
+            <p>Open <strong>Evidence Recorder Dev</strong> → <strong>Connect this phone</strong>.</p>
+            <p>Enter this code, then tap <strong>Connect</strong>:</p>
+            <code id="manual-code" translate="no"></code>
+            <p>Keep this code private.</p>
+          </div>
+        </details>
+      </div>
+      <noscript><p class="step-note">JavaScript is needed to check this invitation. <a href="../#install">Installation guide</a></p></noscript>
     </section>
+    <a class="about-link" href="../#how-it-works">About the app</a>
   </main>
-  <footer class="site-footer wrap"><p>Evidence Recorder</p><p>Invitations expire after two days. An established connection stays connected.</p><a href="../">Welcome page ↗</a></footer>
 </body>
 </html>

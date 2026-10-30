@@ -11,29 +11,43 @@
     return 'intent://abdylan.github.io/connect/#Intent;scheme=https;package=app.evidence.diagnostic;' +
       `S.invitationCode=${code};S.browser_fallback_url=${encodeURIComponent(base + '#invite=' + code)};end`;
   }
-  async function mount({ document, location, fetch }) {
+  async function mount({ document, location, fetch, isCurrent = () => true }) {
     const status = document.getElementById('invitation-status');
     const detail = document.getElementById('invitation-detail');
     const connect = document.getElementById('connect-phone');
     const manual = document.getElementById('manual-code');
+    const steps = document.getElementById('connection-steps');
+    const help = document.getElementById('connection-help');
+    const download = document.getElementById('apk-download');
     const code = parseCode(location.hash);
-    connect.addEventListener('click', event => {
+    connect.onclick = event => {
       if (connect.getAttribute('aria-disabled') === 'true') event.preventDefault();
-    });
+    };
+    download.onclick = event => {
+      if (download.getAttribute('aria-disabled') === 'true') { event.preventDefault(); return; }
+      document.getElementById('download-note').hidden = false;
+    };
+    document.getElementById('download-note').hidden = true;
+    document.getElementById('install-help').open = false;
+    document.getElementById('manual-fallback').open = false;
     const show = (title, text, canOpen, retry = false) => {
+      if (!isCurrent()) return;
       status.textContent = title; detail.textContent = text;
-      connect.textContent = retry ? 'Open app to retry connection' : 'Connect this phone';
+      detail.hidden = !text;
+      steps.hidden = !canOpen;
+      help.hidden = !canOpen;
+      connect.textContent = retry ? 'Open app to retry' : 'Open app';
       connect.setAttribute('aria-disabled', canOpen ? 'false' : 'true');
       if (canOpen) connect.href = intentUrl(code);
       else connect.removeAttribute('href');
     };
     if (!code) {
-      show('Private invitation needed', 'Open the private link or scan the QR code supplied by the app owner.', false);
+      show('Private invitation needed', 'Open the full invitation link sent to you.', false);
       return;
     }
     manual.textContent = code.slice(0, 4) + '-' + code.slice(4);
     document.getElementById('manual-fallback').hidden = false;
-    show('Checking invitation…', 'This check does not connect or claim your invitation.', false);
+    show('Checking invitation…', '', false);
     const abort = new AbortController();
     const timeout = setTimeout(() => abort.abort(), 12000);
     try {
@@ -47,23 +61,37 @@
       const data = JSON.parse(raw);
       switch (data.status) {
         case 'AVAILABLE':
-          show('Invitation available', 'Install the app, then tap Connect this phone. Confirm the connection in the app. Invitations expire 48 hours after creation.', true);
+          show('Invitation available', '', true);
           break;
         case 'EXPIRED':
-          show('Invitation expired', 'Ask the app owner for a new invitation. You can still download the app below.', false);
+          show('Invitation expired', 'Ask for a new invitation link.', false);
           break;
         case 'USED':
-          show('Invitation already used', 'This invitation cannot connect another phone. If this phone lost its connection reply, open the app and retry the same code. Otherwise, ask for a new invitation.', true, true);
+          show('Invitation already used', 'Retry on the original phone. For another phone, ask for a new link.', true, true);
           break;
         case 'UNAVAILABLE':
-          show('Invitation unavailable', 'Check the complete private link or ask the app owner for a new invitation.', false);
+          show('Invitation unavailable', 'Ask for a new invitation link.', false);
           break;
         default: throw new Error('Unexpected response');
       }
     } catch {
-      show('Cannot check now', 'Check your internet connection and reload. You can also open the installed app and try your code; the server will check it before connecting.', true);
+      show('Cannot check now', 'Check your internet connection, or try Open app.', true);
     } finally { clearTimeout(timeout); }
   }
-  if (typeof module !== 'undefined' && module.exports) module.exports = { parseCode, intentUrl, mount };
-  else void mount({ document, location: window.location, fetch: window.fetch.bind(window) });
+  function start(browser) {
+    let revision = 0;
+    const render = () => {
+      const current = ++revision;
+      return mount({ document: browser.document, location: browser.location,
+        fetch: browser.fetch.bind(browser), isCurrent: () => current === revision });
+    };
+    // Focus the content without replacing the access-bearing URL fragment.
+    browser.document.getElementById('skip-content').onclick = event => {
+      event.preventDefault(); browser.document.getElementById('main').focus();
+    };
+    browser.addEventListener('hashchange', render);
+    return render();
+  }
+  if (typeof module !== 'undefined' && module.exports) module.exports = { parseCode, intentUrl, mount, start };
+  else void start(window);
 })();
