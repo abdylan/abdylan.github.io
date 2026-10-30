@@ -3,7 +3,7 @@
 .invitation-card { border: 1px solid var(--line); padding: 30px; }
 .invitation-card h1 { font-size: 34px; line-height: 1.15; letter-spacing: -.025em; }
 .invitation-status { margin-top: 16px; }
-#invitation-status { display: inline-block; padding: 5px 9px; font-size: 13px; font-weight: 500; color: var(--blue); background: var(--surface); }
+#invitation-status { display: inline-block; padding: 5px 9px; font-size: 13px; font-weight: 500; color: var(--accent); background: var(--surface); }
 #invitation-detail { margin-top: 14px; font-size: 15px; color: var(--muted); }
 .connection-steps { list-style: none; margin: 24px 0 0; padding: 0; }
 .connection-steps > li { display: flex; gap: 16px; padding-block: 22px; border-top: 1px solid var(--line); }
@@ -12,7 +12,7 @@
 .step-body { flex: 1; min-width: 0; }
 .step-body h2 { font-size: 19px; margin-bottom: 15px; }
 .step-body .button { width: 100%; min-height: 48px; padding: 12px 16px; justify-content: center; }
-.secondary { border-color: var(--blue); color: var(--blue); background: var(--paper); }
+.secondary { border-color: var(--accent); color: var(--accent); background: var(--paper); }
 .secondary:hover { background: var(--surface); }
 .step-note { font-size: 14px; line-height: 1.4; color: var(--muted); margin-top: 10px; }
 .connection-help { margin-top: 20px; border-top: 1px solid var(--line); }
@@ -21,7 +21,7 @@
 .connection-help details > div { padding-bottom: 16px; font-size: 14px; }
 .connection-help ol { padding-left: 20px; margin: 0 0 14px; }
 .connection-help li { margin-bottom: 7px; }
-#manual-code { display: block; font-size: 28px; font-variant-numeric: tabular-nums; color: var(--blue); margin-block: 18px; user-select: all; }
+#manual-code { display: block; font-size: 28px; font-variant-numeric: tabular-nums; color: var(--accent); margin-block: 18px; user-select: all; }
 .about-link { display: inline-block; margin-top: 22px; font-size: 14px; color: var(--muted); }
 @media (max-width: 700px) {
   .connect-header { padding-block: 22px; }
