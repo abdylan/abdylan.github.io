@@ -10,7 +10,7 @@
   <title>Evidence Recorder — Get started</title>
   <link rel="icon" href="icon.svg?v=pakistan-green-20261030" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=pakistan-green-20261030">
-  <script src="site-config.js?v=0.12-recording-limit" defer></script>
+  <script src="site-config.js?v=0.14-camera-setup" defer></script>
   <script src="main.js" defer></script>
 </head>
 <body>
@@ -57,7 +57,7 @@
           <li><span class="step-dot">2</span><div><strong>In private cloud storage</strong><span>Uploaded clips are verified</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18H6a4 4 0 0 1-.7-7.9A7 7 0 0 1 19 9a4.5 4.5 0 0 1-1 9h-1M12 21V11m-4 4 4-4 4 4"/></svg></li>
           <li><span class="step-dot">3</span><div><strong>With your trusted contacts</strong><span>If your release timer expires</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></li>
         </ol>
-        <p class="illustration-note">A07: front and rear views alternate. Audio continues between views.</p>
+        <p class="illustration-note">A07: rear camera and microphone. Other phones use both cameras only after the app confirms support.</p>
       </aside>
     </section>
 
@@ -79,7 +79,7 @@
         <summary>Read the steps as text</summary>
         <ol>
           <li><strong>Choose contacts and a delay.</strong> Save your trusted contacts and release delay in the app. The six-hour delay shown is an example.</li>
-          <li><strong>Start recording.</strong> Start with the app open and the phone unlocked, then lock it normally. On the Galaxy A07, front and rear views alternate while microphone audio continues.</li>
+          <li><strong>Start recording.</strong> Start with the app open and the phone unlocked, then lock it normally. On the Galaxy A07, the rear camera records with continuous microphone audio.</li>
           <li><strong>Check backup and timer.</strong> With internet access, clips upload to private cloud storage and the server verifies them. Cloud verification and remote-timer confirmation are separate. Without server confirmation, there is no remote timer. A timer already confirmed can continue while the phone is offline.</li>
           <li><strong>Stop recording or cancel sharing.</strong> The countdown starts after recording stops or the server detects an interruption; upload completion is not required to start it. Stopping recording does not cancel sharing. To prevent automatic email, cancel before the deadline and wait for server confirmation.</li>
           <li><strong>Email to your contacts.</strong> If you do not cancel, email attempts wait for the deadline and a verified combined video. The email links to the recording. Provider acceptance does not confirm delivery or reading.</li>
@@ -98,12 +98,12 @@
             <p id="download-meta" class="fine-print" hidden></p>
             <noscript><p class="fine-print">JavaScript is off. Ask the app owner for the current APK download.</p></noscript>
           </div>
-          <p class="fine-print">Android 11 or later. The app currently appears as <strong>Evidence Recorder Dev</strong> on your phone.</p>
+          <p class="fine-print">Android 11 or later. The app currently appears as <strong>Evidence Recorder</strong> on your phone.</p>
         </div>
         <ol class="installation-steps">
           <li><span class="installation-number">1</span><div><h3>Download the app</h3><p>Use the download button or the APK supplied by the app owner. An APK is an Android installation file.</p></div></li>
           <li><span class="installation-number">2</span><div><h3>Install the APK</h3><p>Open the downloaded file. If Android asks, allow installation from that browser or file app, then tap <strong>Install</strong>.</p><p class="fine-print">Settings vary by phone. You can turn off that installation permission afterward. Keep Android security checks enabled.</p><p class="fine-print">If Android reports an incompatible update, keep your existing app and contact the app owner. Do not uninstall while recordings or uploads are pending.</p></div></li>
-          <li id="connect"><span class="installation-number">3</span><div><h3>Connect this phone</h3><p>Return to your private invitation link or scan its QR code, then tap <strong>Connect this phone</strong>. Confirm <strong>Connect</strong> in the app.</p><p class="fine-print">You can also open <strong>Evidence Recorder Dev</strong>, tap <strong>Connect this phone</strong> and enter your eight-character code. Wait for <strong>Phone connected</strong>.</p></div></li>
+          <li id="connect"><span class="installation-number">3</span><div><h3>Connect this phone</h3><p>Return to your private invitation link or scan its QR code, then tap <strong>Connect this phone</strong>. Confirm <strong>Connect</strong> in the app.</p><p class="fine-print">You can also open <strong>Evidence Recorder</strong>, tap <strong>Connect this phone</strong> and enter your eight-character code. Wait for <strong>Phone connected</strong>.</p></div></li>
           <li><span class="installation-number">4</span><div><h3>Complete setup in the app</h3><p>Allow the camera and microphone. Allow location if you want location evidence. Follow the app&rsquo;s notification and battery guidance.</p><p>Choose your video quality. For automatic email, save your contacts and release delay. Read the sharing disclosure before enabling it.</p></div></li>
         </ol>
       </div>
@@ -133,7 +133,7 @@
       <div class="section-heading"><p class="section-number">05 / Questions</p><h2 id="questions-title">Good to know.</h2></div>
       <div class="questions">
         <details><summary>Does recording continue when I lock the screen?</summary><div><p>Yes, during normal screen lock. Start recording while the phone is unlocked and the app is visible. Every recording stops automatically at 60 minutes, including while locked or offline. You can stop earlier after unlocking, or choose a shorter maximum duration.</p></div></details>
-        <details><summary>Does it record both cameras at the same time?</summary><div><p>The Galaxy A07 alternates the front and rear cameras every five seconds. Audio continues between views. One view has gaps while the other is active.</p><p>Simultaneous recording is available on supported hardware, but it has not been physically qualified on other phones.</p></div></details>
+        <details><summary>Does it record both cameras at the same time?</summary><div><p>The Galaxy A07 records the rear camera and microphone. It does not alternate cameras.</p><p>On other phones, the app checks simultaneous front and rear recording after camera and microphone permissions are given. If it cannot confirm support, it uses the rear camera only. S23 FE support is not yet verified.</p></div></details>
         <details><summary>What happens without internet access?</summary><div><p>The phone can save recordings locally. Pending uploads retry when internet access returns, subject to Android restrictions.</p><p>There is no remote timer until the server confirms it. If a timer is already confirmed, a lost connection can cause the server to detect an interruption.</p></div></details>
         <details><summary>What if my connection code is expired or already used?</summary><div><p>Your private invitation page can check its status without using it. The app checks again when you confirm the connection. Ask the app owner for a new invitation if it has expired or was used by another phone.</p><p>Each invitation connects one phone and is valid for 48 hours after creation. Its expiry does not expire a saved phone connection.</p></div></details>
         <details><summary>What happens if the phone turns off?</summary><div><p>Recording stops. Previously finalized clips remain available for upload. After a restart and the first unlock, the app schedules pending uploads. Cameras do not restart automatically.</p><p>After Android force-stop, open the app again to resume upload scheduling. The unfinished last clip can be lost.</p></div></details>
