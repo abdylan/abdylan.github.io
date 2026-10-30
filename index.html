@@ -69,13 +69,23 @@
 
     <section id="how-it-works" class="section wrap" aria-labelledby="how-title">
       <div class="section-heading"><p class="section-number">01 / How it works</p><h2 id="how-title">A simple path from<br>recording to sharing.</h2><p>You choose the contacts and release delay in the app. The server manages the confirmed timer.</p></div>
-      <ol class="process-grid">
-        <li><span class="process-number">01</span><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="19" height="18" rx="3"/><path d="m22 13 7-4v14l-7-4"/><circle cx="12.5" cy="16" r="4"/></svg><h3>Start recording</h3><p>The phone saves short clips. Start while the app is visible, then lock your screen normally.</p></li>
-        <li><span class="process-number">02</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10 24H8a6 6 0 0 1-1-11.9A9 9 0 0 1 25 11a6.5 6.5 0 0 1-1 13h-2M16 28V14m-5 5 5-5 5 5"/></svg><h3>Back up the clips</h3><p>With internet access, the app uploads clips to private storage. The server verifies each upload.</p></li>
-        <li><span class="process-number">03</span><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="17" r="11"/><path d="M16 10v7l5 3M12 2h8M16 2v4M25 7l3-3"/></svg><h3>The countdown starts</h3><p>The countdown starts after recording stops or the server detects an interruption. Upload completion is not required.</p></li>
-        <li><span class="process-number">04</span><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="19" rx="3"/><path d="m3 9 13 10L29 9"/></svg><h3>Cancel or share</h3><p>Cancel before the deadline and confirm the server accepted it. Otherwise, available footage links go to your trusted contacts.</p></li>
-      </ol>
-      <div class="outcomes"><p><span class="outcome-label">Cancellation confirmed</span>No automatic email for that recording.</p><p><span class="outcome-label">Deadline reached</span>The server attempts email delivery when verified media is available.</p></div>
+      <figure class="how-infographic">
+        <a href="assets/how-it-works.png" aria-label="Open the How it works infographic at full size">
+          <img src="assets/how-it-works.png" width="1024" height="1536" loading="lazy" decoding="async" alt="Five steps from recording to trusted contacts: choose contacts and a delay, start recording, check backup and timer, stop or cancel sharing, and receive an email. Read the text version below for details." aria-describedby="how-infographic-caption">
+        </a>
+        <figcaption id="how-infographic-caption">Illustrated example screens. Select the image to open it at full size.</figcaption>
+      </figure>
+      <details class="how-transcript">
+        <summary>Read the steps as text</summary>
+        <ol>
+          <li><strong>Choose contacts and a delay.</strong> Save your trusted contacts and release delay in the app. The six-hour delay shown is an example.</li>
+          <li><strong>Start recording.</strong> Start with the app open and the phone unlocked, then lock it normally. On the Galaxy A07, front and rear views alternate while microphone audio continues.</li>
+          <li><strong>Check backup and timer.</strong> With internet access, clips upload to private cloud storage and the server verifies them. Cloud verification and remote-timer confirmation are separate. Without server confirmation, there is no remote timer. A timer already confirmed can continue while the phone is offline.</li>
+          <li><strong>Stop recording or cancel sharing.</strong> The countdown starts after recording stops or the server detects an interruption; upload completion is not required to start it. Stopping recording does not cancel sharing. To prevent automatic email, cancel before the deadline and wait for server confirmation.</li>
+          <li><strong>Email to your contacts.</strong> If you do not cancel, email attempts wait for the deadline and a verified combined video. The email links to the recording. Provider acceptance does not confirm delivery or reading.</li>
+        </ol>
+      </details>
+      <div class="outcomes"><p><span class="outcome-label">Cancellation confirmed</span>No automatic email for that recording.</p><p><span class="outcome-label">Deadline reached</span>The server attempts email delivery after the combined video is verified.</p></div>
       <p class="section-note">Release checks run every 20 minutes. Email can follow the deadline by almost 20 minutes, plus processing and provider time.</p>
     </section>
 

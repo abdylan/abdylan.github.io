@@ -86,6 +86,15 @@ nav a:hover, .text-link:hover { color: var(--blue); }
 .section-heading { margin-bottom: 43px; }
 .section-heading .section-number { margin-bottom: 19px; }
 .section-heading > p:last-child:not(.section-number) { color: var(--muted); max-width: 58ch; margin-top: 19px; }
+.how-infographic { max-width: 960px; margin: 0 auto; }
+.how-infographic a { display: block; }
+.how-infographic img { display: block; width: 100%; height: auto; }
+.how-infographic figcaption { margin-top: 16px; color: var(--muted); font-size: 14px; }
+.how-transcript { margin-top: 27px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.how-transcript summary { padding: 20px 0; cursor: pointer; color: var(--blue); }
+.how-transcript ol { max-width: 72ch; padding-left: 24px; margin: 0 0 24px; }
+.how-transcript li { padding-left: 5px; margin-bottom: 16px; color: var(--muted); }
+.how-transcript strong { color: var(--ink); font-weight: 500; }
 .process-grid { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); padding: 0; margin: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .process-grid li { position: relative; padding: 27px 23px 27px 0; }
 .process-grid li + li { border-left: 1px solid var(--line); padding-left: 23px; }

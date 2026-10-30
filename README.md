@@ -31,3 +31,14 @@ before changing it. Do not uninstall or clear app data to bypass an update error
 To update the download, change the public APK URL and metadata in site-config.js.
 Keep connect/, .well-known/assetlinks.json and .nojekyll when publishing.
 Never store credentials, real invitation codes or signed storage URLs here.
+
+## How it works
+
+![Five illustrated steps from recording to trusted contacts](assets/how-it-works.png)
+
+Illustrated example screens. Choose contacts and a delay, start recording, check
+cloud backup and timer confirmation, stop or cancel sharing, and receive an email.
+Stopping recording does not cancel sharing. Email attempts wait for the release
+deadline and a verified combined video. Provider acceptance does not confirm delivery.
+The [welcome page](https://abdylan.github.io/#how-it-works) includes a text version
+and a link to the full-size image. The six-hour setting is an example.
