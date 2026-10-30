@@ -34,7 +34,7 @@ Never store credentials, real invitation codes or signed storage URLs here.
 
 ## How it works
 
-![Five illustrated steps from recording to trusted contacts](assets/how-it-works.png)
+![Four illustrated stages from recording to sharing](assets/how-it-works-simple.png)
 
 Illustrated example screens. Choose contacts and a delay, start recording, check
 cloud backup and timer confirmation, stop or cancel sharing, and receive an email.
