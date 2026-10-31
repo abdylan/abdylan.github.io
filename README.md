@@ -3,10 +3,13 @@
 Public welcome and Android installation guide: https://abdylan.github.io/
 
 Download the signed Android release from the website or GitHub Releases.
-The current APK is version 0.14-camera-setup (7.8 MB), with debugging disabled.
+The current APK is version 804.1.1 (7.8 MB), with debugging disabled.
 Recordings stop at 60 minutes; shorter limits and unlocked manual Stop remain available.
 The app checks simultaneous camera support and otherwise uses the rear camera and
 microphone. It does not alternate cameras. The preview stays inside the open app.
+When the camera check passes, the app uses the widest rear view with the normal
+front camera. The S24 Ultra passed at 0.6x; the A07 uses normal rear-only capture.
+Public versions always use 804.minor.patch; the major number 804 is permanent.
 Android 11 or later is required. It uses the same release signing key as version 0.8.
 
 Ask the app owner for your own private invitation link, QR code or eight-character
