@@ -3,7 +3,11 @@
 Public welcome and Android installation guide: https://abdylan.github.io/
 
 Download the signed Android release from the website or GitHub Releases.
-The current APK is version 804.1.3 (40.1 MB), with debugging disabled.
+The current APK is version 804.1.4 (40.1 MB), with debugging disabled.
+Daily checks show a quiet reminder when a newer compatible update is available.
+See what changed and download from Settings → App updates. Release notes are
+available offline and at https://abdylan.github.io/updates.html .
+Existing users need this one manual update to gain future reminders.
 GPS continues during audio-only capture. After the first fix, updates require at
 least 30 seconds and 25 metres of movement, accounting for GPS accuracy. Offline
 location history is retained; GPS payload uploads, including backlog, remain at
@@ -43,7 +47,8 @@ An owner-assisted signing-key migration is required for an in-place update.
 Keep your existing app if recordings or uploads are pending, and contact the owner
 before changing it. Do not uninstall or clear app data to bypass an update error.
 
-To update the download, change the public APK URL and metadata in site-config.js.
+To update the download, publish and verify the signed APK first, then update
+site-config.js and releases.json. Keep release notes short in English and Urdu.
 Keep connect/, .well-known/assetlinks.json and .nojekyll when publishing.
 Never store credentials, real invitation codes or signed storage URLs here.
 

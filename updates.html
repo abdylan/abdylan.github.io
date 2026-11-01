@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>What’s new · Evidence Recorder</title>
+  <style>
+    :root { font-family: system-ui, sans-serif; color: #182d26; background: #f8fbf8; line-height: 1.6; }
+    body { max-width: 42rem; margin: auto; padding: 2rem 1.25rem; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    h1 { font-size: 2rem; line-height: 1.2; margin-top: 2rem; } h2 { font-size: 1.2rem; }
+    article { padding: 1rem 0; border-top: 1px solid #bdccc3; }
+    a { color: #116b60; text-underline-offset: .2em; } button, .download { min-height: 44px; padding: .55rem 1rem; border-radius: .5rem; font: inherit; }
+    button { background: transparent; color: inherit; border: 1px solid #78877f; cursor: pointer; }
+    .download { display: inline-block; background: #116b60; color: white; text-decoration: none; box-sizing: border-box; }
+    :focus-visible { outline: 3px solid #a66e00; outline-offset: 4px; } li { margin-block: .4rem; }
+    @media (prefers-color-scheme: dark) { :root { color: #eee9dd; background: #1c1c19; } a { color: #ded0b5; } article { border-color: #49463b; } .download { background: #ded0b5; color: #373023; } }
+  </style>
+  <script src="updates.js" defer></script>
+</head>
+<body>
+  <header><a href="./" id="home">Evidence Recorder</a><button id="language" type="button">اردو</button></header>
+  <main>
+    <h1 id="title">What’s new</h1>
+    <p id="instruction">Open the downloaded APK and tap Update. Keep the app installed to keep your recordings and cloud connection.</p>
+    <p id="status" role="status">Loading updates…</p>
+    <div id="releases"></div>
+    <noscript><p>Enable JavaScript to read release notes, or return to the download page.</p></noscript>
+  </main>
+</body>
+</html>
