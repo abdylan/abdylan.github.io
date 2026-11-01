@@ -10,7 +10,7 @@
   <title>Evidence Recorder — Keep evidence beyond your phone</title>
   <link rel="icon" href="icon.svg?v=pakistan-green-20261030" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=pakistan-green-20261030">
-  <script src="site-config.js?v=804.1.1" defer></script>
+  <script src="site-config.js?v=804.1.2" defer></script>
   <script src="main.js" defer></script>
 </head>
 <body>
@@ -81,7 +81,7 @@
           <li><strong>Choose contacts and a delay.</strong> Save your trusted contacts and release delay in the app. The six-hour delay shown is an example.</li>
           <li><strong>Start recording.</strong> Start with the app open and the phone unlocked, then lock it normally. On the Galaxy A07, the rear camera records with continuous microphone audio.</li>
           <li><strong>Check backup and timer.</strong> With internet access, clips upload to private cloud storage and the server verifies them. Cloud verification and remote-timer confirmation are separate. Without server confirmation, there is no remote timer. A timer already confirmed can continue while the phone is offline.</li>
-          <li><strong>Stop recording or cancel sharing.</strong> The countdown starts after recording stops or the server detects an interruption; upload completion is not required to start it. Stopping recording does not cancel sharing. To prevent automatic email, cancel before the deadline and wait for server confirmation.</li>
+          <li><strong>Stop recording or cancel sharing.</strong> The countdown starts when video stops, recording ends, or the server detects an interruption; upload completion is not required to start it. Audio can continue after the video cutoff. Stopping recording does not cancel sharing. To prevent automatic email, cancel before the deadline and wait for server confirmation.</li>
           <li><strong>Email to your contacts.</strong> If you do not cancel, email attempts wait for the deadline and a verified combined video. The email links to the recording. Provider acceptance does not confirm delivery or reading.</li>
         </ol>
       </details>
@@ -132,11 +132,11 @@
     <section id="questions" class="section wrap questions-section" aria-labelledby="questions-title">
       <div class="section-heading"><p class="section-number">05 / Questions</p><h2 id="questions-title">Good to know.</h2></div>
       <div class="questions">
-        <details><summary>Does recording continue when I lock the screen?</summary><div><p>Yes, during normal screen lock. Start recording while the phone is unlocked and the app is visible. Every recording stops automatically at 60 minutes, including while locked or offline. You can stop earlier after unlocking, or choose a shorter maximum duration.</p></div></details>
+        <details><summary>Does recording continue when I lock the screen?</summary><div><p>Yes, during normal screen lock. Start recording while the phone is unlocked and the app is visible. Video stops at your selected limit of 10–30 minutes. The phone then continues audio capture until the battery reaches 10%, or an earlier stop condition. Speech detection selects audio clips for upload. You can stop earlier after unlocking.</p></div></details>
         <details><summary>Does it record both cameras at the same time?</summary><div><p>The Galaxy A07 records the rear camera and microphone. It does not alternate cameras.</p><p>On other phones, the app checks simultaneous front and rear recording after camera and microphone permissions are given. If it cannot confirm support, it uses the rear camera only. S23 FE support is not yet verified.</p></div></details>
         <details><summary>What happens without internet access?</summary><div><p>The phone can save recordings locally. Pending uploads retry when internet access returns, subject to Android restrictions.</p><p>There is no remote timer until the server confirms it. If a timer is already confirmed, a lost connection can cause the server to detect an interruption.</p></div></details>
         <details><summary>What if my connection code is expired or already used?</summary><div><p>Your private invitation page can check its status without using it. The app checks again when you confirm the connection. Ask the app owner for a new invitation if it has expired or was used by another phone.</p><p>Each invitation connects one phone and is valid for 48 hours after creation. Its expiry does not expire a saved phone connection.</p></div></details>
-        <details><summary>What happens if the phone turns off?</summary><div><p>Recording stops. Previously finalized clips remain available for upload. After a restart and the first unlock, the app schedules pending uploads. Cameras do not restart automatically.</p><p>After Android force-stop, open the app again to resume upload scheduling. The unfinished last clip can be lost.</p></div></details>
+        <details><summary>What happens if the phone turns off?</summary><div><p>Recording stops. Previously finalized clips remain available for upload. After one-time setup while unlocked, the updated app can upload pending clips after a restart before the first unlock. Android scheduling and network availability can delay uploads. Cameras do not restart automatically.</p><p>After Android force-stop, open the app again to resume upload scheduling. The unfinished last clip can be lost.</p></div></details>
         <details><summary>Who can see my recordings?</summary><div><p>Recordings upload to private AWS storage. Automatic sharing sends trusted contacts expiring access links. Anyone who receives a forwarded link can use it until access expires.</p><p>New automatic-email recordings include an administrator copy after the app discloses it and you accept. Read that disclosure before enabling sharing.</p><p>This public webpage contains installation guidance only. It does not access your recordings, connection code, or account credentials.</p></div></details>
       </div>
     </section>

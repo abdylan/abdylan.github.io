@@ -3,8 +3,12 @@
 Public welcome and Android installation guide: https://abdylan.github.io/
 
 Download the signed Android release from the website or GitHub Releases.
-The current APK is version 804.1.1 (7.8 MB), with debugging disabled.
-Recordings stop at 60 minutes; shorter limits and unlocked manual Stop remain available.
+The current APK is version 804.1.2 (40.1 MB), with debugging disabled.
+Video stops at the selected 10–30-minute limit. Audio can continue until 10% battery,
+with speech-selected clips uploaded to the cloud. Unlocked manual Stop remains available.
+After updating, open the app once while unlocked to prepare storage. Pending uploads
+can then resume after reboot before the first unlock, subject to Android scheduling
+and network availability.
 The app checks simultaneous camera support and otherwise uses the rear camera and
 microphone. It does not alternate cameras. The preview stays inside the open app.
 When the camera check passes, the app uses the widest rear view with the normal
