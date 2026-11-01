@@ -3,8 +3,8 @@ window.EVIDENCE_SITE = Object.freeze({
   // Set this to a public HTTPS APK URL (for example, a GitHub Release asset),
   // or a relative path to an APK you have deliberately included in the website.
   // Empty disables the download button until a release is available.
-  apkUrl: "https://github.com/abdylan/abdylan.github.io/releases/download/android-804.1.2-20261101/evidence-recorder-804.1.2-release.apk",
+  apkUrl: "https://github.com/abdylan/abdylan.github.io/releases/download/android-804.1.3-20261101/evidence-recorder-804.1.3-release.apk",
   // Confirmed metadata for this exact signed release APK.
-  appVersion: "804.1.2",
-  apkSizeMb: 40.102321
+  appVersion: "804.1.3",
+  apkSizeMb: 40.110513
 });

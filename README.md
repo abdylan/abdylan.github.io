@@ -3,7 +3,11 @@
 Public welcome and Android installation guide: https://abdylan.github.io/
 
 Download the signed Android release from the website or GitHub Releases.
-The current APK is version 804.1.2 (40.1 MB), with debugging disabled.
+The current APK is version 804.1.3 (40.1 MB), with debugging disabled.
+GPS continues during audio-only capture. After the first fix, updates require at
+least 30 seconds and 25 metres of movement, accounting for GPS accuracy. Offline
+location history is retained; GPS payload uploads, including backlog, remain at
+least 30 seconds apart.
 Video stops at the selected 10–30-minute limit. Audio can continue until 10% battery,
 with speech-selected clips uploaded to the cloud. Unlocked manual Stop remains available.
 After updating, open the app once while unlocked to prepare storage. Pending uploads
