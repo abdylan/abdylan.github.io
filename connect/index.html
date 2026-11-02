@@ -9,12 +9,12 @@
   <meta name="theme-color" content="#ffffff">
   <title>Connect your phone — Evidence Recorder</title>
   <link rel="icon" href="../icon.svg?v=pakistan-green-20261030" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css?v=apk-models-alert-20261102">
+  <link rel="stylesheet" href="../styles.css?v=concise-guide-20261102">
   <link rel="stylesheet" href="connect.css?v=pakistan-green-20261030">
   <script src="../site-config.js?v=804.1.5-models-20261102" defer></script>
   <script src="../device-catalog.js?v=20261102" defer></script>
   <script src="../apk-recommendation.js?v=20261102" defer></script>
-  <script src="../main.js?v=apk-models-alert-20261102" defer></script>
+  <script src="../main.js?v=concise-guide-20261102" defer></script>
   <script src="connect.js?v=20261030" defer></script>
 </head>
 <body>
@@ -37,21 +37,21 @@
             <p id="download-recommendation" class="step-note" role="status" hidden></p>
             <div id="phone-match-alert" class="phone-match-alert" role="alert" hidden>
               <strong>Phone model not matched</strong>
-              <p>Select your phone make and model to check for a smaller APK. You can still use Universal.</p>
+              <p>Choose your phone below, or use Universal.</p>
               <button id="choose-phone-model" class="button secondary" type="button" aria-controls="phone-picker" aria-expanded="false">Choose make and model</button>
             </div>
             <details id="download-options" class="download-options" hidden>
               <summary>Other download options</summary>
               <ul id="download-options-list"></ul>
-              <p class="step-note">Universal is the safe choice if unsure. Model-based suggestions are estimates, not a compatibility guarantee. All matching happens on this page; your model is not sent anywhere.</p>
+              <p class="step-note">Model matches are estimates. Unsure? Choose Universal.</p>
             </details>
             <details id="phone-picker" class="download-options">
               <summary>Find my phone model</summary>
-              <label for="phone-model">Phone make, model or exact model number</label>
+              <label for="phone-model">Make, model or model number</label>
               <input id="phone-model" type="text" list="phone-models" maxlength="120" autocomplete="off" placeholder="e.g. SM-A525F">
               <datalist id="phone-models"></datalist>
-              <p class="step-note">253 phone profiles, matched locally. <a href="../device-catalog-sources.md">Sources and limits</a></p>
-              <p class="step-note">Choose an exact match or enter the model number from Settings → About phone. Unknown or ambiguous models use Universal. A model match does not verify camera or recording support.</p>
+              <p class="step-note">253 phone models. <a href="../device-catalog-sources.md">Sources and limits</a></p>
+              <p class="step-note">Find the model in Settings → About phone. Matching stays on this page.</p>
             </details>
             <p id="download-note" class="step-note" role="status" hidden>Install the downloaded file. Then return here.</p>
           </div>

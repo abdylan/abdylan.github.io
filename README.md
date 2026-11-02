@@ -88,3 +88,9 @@ with generated media and a demo evidence download. Updated private-report featur
 are a preview and are not live on the evidence backend yet. This website update
 changes no enrollment, recording, recipient settings or real evidence access.
 The APK download remains the already-published 804.1.5 release.
+
+
+The guide was shortened on 2 November: sections 3–5 now use brief installation
+steps, data-size cards and preparation checks. Unidentified browsers also show the
+unmatched-phone action immediately, with a one-tap make/model selector. Universal
+remains available and model-based matches remain estimates.

@@ -80,7 +80,7 @@
     download.href = candidate.url.href;
     download.removeAttribute("aria-disabled");
     download.setAttribute("referrerpolicy", "no-referrer");
-    if (!compact) note.textContent = "Download the APK, then follow the installation steps. Cloud access requires your connection code in the app.";
+    if (!compact) note.textContent = "Install the APK, then open the app.";
 
     const details = [];
     if (compact) details.push("Android 11+");
@@ -128,7 +128,7 @@
   function applyRecommendation(result, settled = true) {
     if (!result) return;
     if (matchAlert) matchAlert.hidden = !(settled && !result.unsupported
-      && result.basis === "fallback" && result.reason === "unconfirmed");
+      && (result.id === "universal" || result.basis === "fallback"));
     if (result.unsupported) {
       download.removeAttribute("href");
       download.setAttribute("aria-disabled", "true");
@@ -138,17 +138,17 @@
     const available = result.id === "universal" ? universal : architectureVariants[result.id];
     selectPrimary(available || universal);
     if (!explanation) return;
-    explanation.hidden = false;
+    explanation.hidden = !!matchAlert && !matchAlert.hidden;
     explanation.textContent = !available || result.id === "universal"
-      ? "Architecture could not be confirmed. Universal is recommended."
+      ? "Universal selected. Choose your phone to check for a smaller APK."
       : result.basis === "model"
-        ? `${result.model}: ${labels[result.id]} suggested from the phone model. Android compatibility is not confirmed; use Universal if installation fails.`
-        : `${labels[result.id]} suggested from browser CPU information. Universal is also available.`;
+        ? `${result.model}: ${labels[result.id]} model estimate. Use Universal if unsure.`
+        : `${labels[result.id]} suggested by your browser. Universal is also available.`;
   }
 
   function recommend() {
-    if (manualChoice || (!architectureVariants.arm64 && !architectureVariants.arm32)) return;
-    const fallback = () => matcher?.recommend(browser, {}, catalog) || { id: "universal" };
+    if (manualChoice) return;
+    const fallback = () => matcher?.recommend(browser, {}, catalog) || { id: "universal", basis: "fallback" };
     const agent = browser.userAgentData;
     const canAsk = agent?.platform === "Android" && typeof agent.getHighEntropyValues === "function";
     applyRecommendation(fallback(), !canAsk);
@@ -165,7 +165,7 @@
       if (result) applyRecommendation(result);
       else {
         const id = values?.architecture === "arm" ? ({ "64": "arm64", "32": "arm32" })[String(values?.bitness)] : null;
-        selectPrimary((id && architectureVariants[id]) || universal);
+        applyRecommendation({ id: id || "universal", basis: id ? "browser" : "fallback" });
       }
     };
     timer = setTimeout(() => finish(null), 1000);

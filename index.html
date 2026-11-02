@@ -9,11 +9,11 @@
   <meta name="theme-color" content="#ffffff">
   <title>Evidence Recorder — Keep evidence beyond your phone</title>
   <link rel="icon" href="icon.svg?v=pakistan-green-20261030" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=apk-models-alert-20261102">
+  <link rel="stylesheet" href="styles.css?v=concise-guide-20261102">
   <script src="site-config.js?v=804.1.5-models-20261102" defer></script>
   <script src="device-catalog.js?v=20261102" defer></script>
   <script src="apk-recommendation.js?v=20261102" defer></script>
-  <script src="main.js?v=apk-models-alert-20261102" defer></script>
+  <script src="main.js?v=concise-guide-20261102" defer></script>
   <script src="nav.js?v=protection-20261101" defer></script>
 </head>
 <body class="home-page">
@@ -41,7 +41,7 @@
       <div class="hero-copy">
         <p class="eyebrow">Android · Private cloud backup · Timed email sharing</p>
         <h1 id="hero-title">Record fascism.<br><span>Keep evidence<br class="desktop-break"> beyond your phone.</span></h1>
-        <p class="hero-description">Record abuse and repression without relying on your phone as the only copy. Back up video and audio as you record, and set a timer to share access with your loved ones if you do not cancel. Clips already uploaded to private cloud storage remain available even if your phone is stolen or seized.</p>
+        <p class="hero-description">Record abuse and repression. Back up video and audio to private cloud storage, and set a timer to share with loved ones unless you cancel. Uploaded clips remain available if your phone is taken.</p>
         <div class="hero-actions">
           <a class="button primary" href="#install">Get the Android app <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
           <a class="text-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
@@ -103,7 +103,7 @@
         <div class="section-heading">
           <p class="section-number">02 / Protection report</p>
           <h2 id="protection-title">What a private report shows.</h2>
-          <p>One protected link. Available media, known coverage and limits, with originals and hashes available when needed.</p>
+          <p>Video, audio and location in one private report.</p>
         </div>
         <div class="report-preview" aria-hidden="true">
           <div class="preview-bar"><span class="preview-dot"></span><span>Private report</span><span class="preview-pill">Sample</span></div>
@@ -113,71 +113,75 @@
         </div>
       </div>
       <ol class="evidence-flow">
-        <li><span>01</span><div><h3>Play what exists</h3><p>Protected original clips and a combined video, loaded only when selected.</p></div></li>
-        <li><span>02</span><div><h3>See the limits</h3><p>Known intervals and gaps stay labelled. Missing cloud audio is not silence.</p></div></li>
-        <li><span>03</span><div><h3>Keep a copy</h3><p>One ZIP with the stitched video, verified post-video audio, location files and checksums.</p></div></li>
+        <li><span>01</span><div><h3>Play what exists</h3><p>Watch video and listen to available audio.</p></div></li>
+        <li><span>02</span><div><h3>See the limits</h3><p>Gaps stay visible. Missing audio is not silence.</p></div></li>
+        <li><span>03</span><div><h3>Keep a copy</h3><p>Download one evidence ZIP with media, location and checksums.</p></div></li>
       </ol>
-      <p class="section-note">Updated private-report features are not live yet. This example uses generated video and tones, with no real evidence or location.</p>
+      <p class="section-note">Preview only: updated reports are not live yet. All example media is generated.</p>
       <p><a class="button primary" href="sample-report/">Open the fictional sample report <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
     </section>
 
     <section id="install" class="install-section" aria-labelledby="install-title">
       <div class="section wrap install-grid">
-        <div class="install-intro"><p class="section-number">03 / Install and connect</p><h2 id="install-title">Set up once.<br>Be ready to record.</h2><p>You will need an Android phone, internet access, and the connection code from the app owner.</p>
+        <div class="install-intro">
+          <p class="section-number">03 / Install and connect</p>
+          <h2 id="install-title">Get the app.</h2>
+          <p>Android 11+ and an invitation code.</p>
           <div class="download-panel">
-            <a id="apk-download" class="button primary download-button" aria-disabled="true">Download Android APK <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
-            <p id="download-note" role="status">The APK download has not been published yet. Ask the app owner for the current installation file.</p>
+            <a id="apk-download" class="button primary download-button" aria-disabled="true">Download app <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
+            <p id="download-note" role="status">Ask the app owner for the current APK.</p>
             <p id="download-meta" class="fine-print" hidden></p>
             <p id="download-recommendation" class="fine-print" role="status" hidden></p>
             <div id="phone-match-alert" class="phone-match-alert" role="alert" hidden>
               <strong>Phone model not matched</strong>
-              <p>Select your phone make and model to check for a smaller APK. You can still use Universal.</p>
+              <p>Choose your phone below, or use Universal.</p>
               <button id="choose-phone-model" class="button secondary" type="button" aria-controls="phone-picker" aria-expanded="false">Choose make and model</button>
             </div>
-            <details id="download-options" class="download-options" hidden>
-              <summary>Other download options</summary>
-              <ul id="download-options-list"></ul>
-              <p class="fine-print">Universal is the safe choice if unsure. Model-based suggestions are estimates, not a compatibility guarantee. All matching happens on this page; your model is not sent anywhere.</p>
-            </details>
             <details id="phone-picker" class="download-options">
-              <summary>Find my phone model</summary>
-              <label for="phone-model">Phone make, model or exact model number</label>
-              <input id="phone-model" type="text" list="phone-models" maxlength="120" autocomplete="off" placeholder="e.g. SM-A525F">
+              <summary>Choose phone model</summary>
+              <label for="phone-model">Make, model or model number</label>
+              <input id="phone-model" type="text" list="phone-models" maxlength="120" autocomplete="off" placeholder="e.g. Samsung Galaxy A52">
               <datalist id="phone-models"></datalist>
-              <p class="fine-print">253 phone profiles, matched locally. <a href="device-catalog-sources.md">Sources and limits</a></p>
-              <p class="fine-print">Choose an exact match or enter the model number from Settings → About phone. Unknown or ambiguous models use Universal. A model match does not verify camera or recording support.</p>
+              <p class="fine-print">Find the model in Settings → About phone. <a href="device-catalog-sources.md">Catalog sources</a></p>
             </details>
-            <p class="fine-print"><a href="updates.html">What’s new in the latest update</a></p>
-            <noscript><p class="fine-print">JavaScript is off. Ask the app owner for the current APK download.</p></noscript>
+            <details id="download-options" class="download-options" hidden>
+              <summary>All APK options</summary>
+              <ul id="download-options-list"></ul>
+              <p class="fine-print">Model matches are estimates. Unsure? Choose Universal.</p>
+            </details>
+            <p class="fine-print"><a href="updates.html">What’s new</a> · Do not uninstall while uploads are pending.</p>
+            <noscript><p class="fine-print">Enable JavaScript or ask the owner for the APK.</p></noscript>
           </div>
-          <p class="fine-print">Android 11 or later. The app currently appears as <strong>Evidence Recorder</strong> on your phone.</p>
+          <details class="installation-help"><summary>Installation help</summary><div>
+            <p>Allow installation from your browser if prompted. Keep Android security checks enabled; you can turn off the installation permission afterward.</p>
+            <p>If an update is rejected, keep the existing app and contact the owner. Never clear app data while evidence is pending.</p>
+          </div></details>
         </div>
         <ol class="installation-steps">
-          <li><span class="installation-number">1</span><div><h3>Download the app</h3><p>Use the download button or the APK supplied by the app owner. An APK is an Android installation file.</p></div></li>
-          <li><span class="installation-number">2</span><div><h3>Install the APK</h3><p>Open the downloaded file. If Android asks, allow installation from that browser or file app, then tap <strong>Install</strong>.</p><p class="fine-print">Settings vary by phone. You can turn off that installation permission afterward. Keep Android security checks enabled.</p><p class="fine-print">If Android reports an incompatible update, keep your existing app and contact the app owner. Do not uninstall while recordings or uploads are pending.</p></div></li>
-          <li id="connect"><span class="installation-number">3</span><div><h3>Connect this phone</h3><p>Return to your private invitation link or scan its QR code, then tap <strong>Connect this phone</strong>. Confirm <strong>Connect</strong> in the app.</p><p class="fine-print">You can also open <strong>Evidence Recorder</strong>, tap <strong>Connect this phone</strong> and enter your eight-character code. Wait for <strong>Phone connected</strong>.</p></div></li>
-          <li><span class="installation-number">4</span><div><h3>Complete setup in the app</h3><p>Allow the camera and microphone. Precise location permission and phone location services are currently required before recording; missing, stale or denied fixes stay explicit. Follow the app&rsquo;s notification and battery guidance.</p><p>Choose your video quality. For automatic email, save your contacts and sharing countdown. The app shows the effective recipients, including the default recipient, before the demo and while you choose recipients. The default recipient is included in new recordings; historical recordings keep their original audience.</p></div></li>
+          <li><span class="installation-number">1</span><div><h3>Download</h3><p>Save the APK from this page.</p></div></li>
+          <li><span class="installation-number">2</span><div><h3>Install</h3><p>Open the file and follow Android’s prompts.</p></div></li>
+          <li id="connect"><span class="installation-number">3</span><div><h3>Connect</h3><p>Open your invitation link, or enter its code under <strong>Connect this phone</strong>. Wait for confirmation.</p></div></li>
+          <li><span class="installation-number">4</span><div><h3>Complete setup</h3><p>Allow camera, microphone and precise location. Review all recipients, including the default recipient, then run the test.</p></div></li>
         </ol>
       </div>
     </section>
 
     <section id="data" class="section wrap" aria-labelledby="data-title">
-      <div class="section-heading"><p class="section-number">04 / Mobile data</p><h2 id="data-title">Ten minutes of video.<br>Here is the upload size.</h2><p>These estimates include microphone audio and one active camera at a time, as used by the Galaxy A07.</p></div>
+      <div class="section-heading"><p class="section-number">04 / Mobile data</p><h2 id="data-title">Data for 10 minutes.</h2><p>Rear camera and microphone. Actual uploads vary.</p></div>
       <div class="quality-grid">
-        <article class="quality-option"><div class="quality-heading"><h3>Economy</h3><span>480p · 15 FPS requested</span></div><p class="data-amount">25–30 <span>MB</span></p><p>Smaller uploads. A useful starting point for mobile data.</p><div class="data-bar" aria-hidden="true"><span class="economy-bar"></span></div><p class="codec-note"><span>HEVC: 24.6 MB</span><span>H.264: 29.9 MB</span></p></article>
-        <article class="quality-option"><div class="quality-heading"><h3>Standard</h3><span>720p · 15 FPS requested</span></div><p class="data-amount">40–49 <span>MB</span></p><p>More image detail. Uses more mobile data.</p><div class="data-bar" aria-hidden="true"><span class="standard-bar"></span></div><p class="codec-note"><span>HEVC: 39.6 MB</span><span>H.264: 48.6 MB</span></p></article>
+        <article class="quality-option"><div class="quality-heading"><h3>Economy</h3><span>480p</span></div><p class="data-amount">25–30 <span>MB</span></p><p>Smaller uploads.</p><div class="data-bar" aria-hidden="true"><span class="economy-bar"></span></div></article>
+        <article class="quality-option"><div class="quality-heading"><h3>Standard</h3><span>720p</span></div><p class="data-amount">40–49 <span>MB</span></p><p>More image detail.</p><div class="data-bar" aria-hidden="true"><span class="standard-bar"></span></div></article>
       </div>
-      <p class="section-note">Estimates use the configured video bitrate plus 48 kbps audio. MB means 1,000,000 bytes. Actual use varies with the phone and recording.</p>
-      <details class="data-details"><summary>What can change these estimates?</summary><div><p>The app uses HEVC when the phone passes its encoder check. Otherwise, it uses H.264. Both settings keep microphone audio.</p><p>Network overhead and repeated uploads can increase data use. Downloading a combined video uses additional data. Simultaneous front and rear recording on supported phones also uses more data.</p></div></details>
+      <details class="data-details"><summary>How these estimates work</summary><div><p>Ranges cover the configured HEVC/H.264 bitrates plus 48 kbps microphone audio. Two-camera recording, retries and video downloads use more data. Actual size depends on the phone and recording.</p></div></details>
     </section>
 
     <section id="tips" class="section wrap tips-section" aria-labelledby="tips-title">
-      <div class="section-heading"><p class="section-number">05 / Before you need it</p><h2 id="tips-title">A few checks<br>make a difference.</h2></div>
+      <div class="section-heading"><p class="section-number">05 / Before recording</p><h2 id="tips-title">Four quick checks.</h2></div>
       <div class="tips-grid">
-        <article><span class="tip-number">01</span><h3>Try a short recording</h3><p>Check the camera, microphone, uploads, and readiness results. Make sure you understand the timer controls before relying on them.</p></article>
-        <article><span class="tip-number">02</span><h3>Check the confirmed states</h3><p>A file saved on your phone is not yet a verified cloud copy. Saved email settings are not a confirmed server timer.</p></article>
-        <article><span class="tip-number">03</span><h3>Keep space and power available</h3><p>Low storage, an empty battery, or Android restrictions can interrupt recording. Follow the app&rsquo;s battery guidance for your phone.</p></article>
-        <article><span class="tip-number">04</span><h3>Keep pending recordings on the phone</h3><p>Do not uninstall the app or clear its data while uploads are pending. Reconnect to the internet to let uploads resume.</p></article>
+        <article><span class="tip-number">01</span><h3>Try it first</h3><p>Run the app’s camera, microphone and upload checks.</p></article>
+        <article><span class="tip-number">02</span><h3>Confirm protection</h3><p>Cloud backup and the sharing timer each need confirmation.</p></article>
+        <article><span class="tip-number">03</span><h3>Charge and make space</h3><p>Low battery or storage can stop recording.</p></article>
+        <article><span class="tip-number">04</span><h3>Keep pending evidence</h3><p>Reconnect to upload. Do not uninstall or clear app data.</p></article>
       </div>
     </section>
 
