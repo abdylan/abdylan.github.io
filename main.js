@@ -11,6 +11,11 @@
   if (!download) return;
 
   const compact = download.dataset?.layout === "compact";
+  const guided = download.dataset?.layout === "guided";
+  const downloadLabel = document.getElementById("download-label");
+  const downloadKind = document.getElementById("download-kind");
+  const useUniversal = document.getElementById("use-universal");
+  let unsupported = false;
   const labels = { universal: "Universal", arm64: "arm64-v8a", arm32: "armeabi-v7a" };
   let manualChoice = false;
 
@@ -80,13 +85,18 @@
     download.href = candidate.url.href;
     download.removeAttribute("aria-disabled");
     download.setAttribute("referrerpolicy", "no-referrer");
-    if (!compact) note.textContent = "Install the APK, then open the app.";
+    if (!compact) note.textContent = guided
+      ? "APK is the Android installation file."
+      : "Install the APK, then open the app.";
+    if (guided && downloadLabel) downloadLabel.textContent = candidate.id === "universal" ? "Download Universal APK" : "Download smaller APK";
+    if (guided && downloadKind) downloadKind.textContent = candidate.id === "universal" ? "Universal · simplest choice" : "Smaller file · suggested for your phone";
+    if (useUniversal) useUniversal.hidden = candidate.id === "universal";
 
     const details = [];
     if (compact) details.push("Android 11+");
     else if (candidate.version) details.push(`Version ${candidate.version}`);
     if (candidate.sizeMb) details.push(`${formatSize(candidate.sizeMb)}${compact ? "" : " download"}`);
-    if (candidate.id !== "universal") details.push(labels[candidate.id]);
+    if (candidate.id !== "universal" && !guided) details.push(labels[candidate.id]);
     meta.textContent = details.join(" · ");
     meta.hidden = details.length === 0;
   }
@@ -129,7 +139,9 @@
     if (!result) return;
     if (matchAlert) matchAlert.hidden = !(settled && !result.unsupported
       && (result.id === "universal" || result.basis === "fallback"));
+    unsupported = !!result.unsupported;
     if (result.unsupported) {
+      if (useUniversal) useUniversal.hidden = true;
       download.removeAttribute("href");
       download.setAttribute("aria-disabled", "true");
       if (explanation) { explanation.hidden = false; explanation.textContent = "Android 11 or later is required. This phone reports an older Android version."; }
@@ -140,10 +152,10 @@
     if (!explanation) return;
     explanation.hidden = !!matchAlert && !matchAlert.hidden;
     explanation.textContent = !available || result.id === "universal"
-      ? "Universal selected. Choose your phone to check for a smaller APK."
+      ? "Universal selected. Phone model selection is optional."
       : result.basis === "model"
-        ? `${result.model}: ${labels[result.id]} model estimate. Use Universal if unsure.`
-        : `${labels[result.id]} suggested by your browser. Universal is also available.`;
+        ? guided ? `Model match: ${result.model}. Same app, smaller file; the match is an estimate.` : `${result.model}: ${labels[result.id]} model estimate. Use Universal if unsure.`
+        : guided ? "Your browser suggests this smaller file. It installs the same app." : `${labels[result.id]} suggested by your browser. Universal is also available.`;
   }
 
   function recommend() {
@@ -175,6 +187,15 @@
       else request.then(finish, () => finish(null));
     } catch { finish(null); }
   }
+
+  if (useUniversal) useUniversal.addEventListener("click", () => {
+    if (unsupported) return;
+    manualChoice = true;
+    applyRecommendation({ id: "universal", basis: "manual" });
+    // An explicit choice does not need another phone-matching prompt.
+    if (matchAlert) matchAlert.hidden = true;
+    if (explanation) explanation.hidden = false;
+  });
 
   if (chooseModel && modelPicker && modelInput) {
     chooseModel.addEventListener("click", () => {

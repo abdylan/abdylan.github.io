@@ -100,3 +100,5 @@ The fictional report sample now shows three numbered GPS fixes on an illustrativ
 map, with times, coordinates and accuracy. The demo ZIP includes the same map and
 GPS CSV. All sample locations and geography are fictional; the map makes no
 third-party requests and does not access real evidence or device location.
+
+The app installation section now separates website download, Android installation and in-app setup. A single selected APK button, optional model matching and an explicit Universal fallback clarify which file to use; invitation, recipient and permission steps are identified separately.

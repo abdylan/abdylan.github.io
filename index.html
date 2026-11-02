@@ -9,11 +9,11 @@
   <meta name="theme-color" content="#ffffff">
   <title>Evidence Recorder — Keep evidence beyond your phone</title>
   <link rel="icon" href="icon.svg?v=pakistan-green-20261030" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=concise-guide-20261102">
+  <link rel="stylesheet" href="styles.css?v=guided-install-20261102">
   <script src="site-config.js?v=804.1.5-models-20261102" defer></script>
   <script src="device-catalog.js?v=20261102" defer></script>
   <script src="apk-recommendation.js?v=20261102" defer></script>
-  <script src="main.js?v=concise-guide-20261102" defer></script>
+  <script src="main.js?v=guided-install-20261102" defer></script>
   <script src="nav.js?v=protection-20261101" defer></script>
 </head>
 <body class="home-page">
@@ -122,46 +122,66 @@
     </section>
 
     <section id="install" class="install-section" aria-labelledby="install-title">
-      <div class="section wrap install-grid">
-        <div class="install-intro">
-          <p class="section-number">03 / Install and connect</p>
+      <div class="section wrap">
+        <div class="section-heading install-heading">
+          <p class="section-number">03 / Get started</p>
           <h2 id="install-title">Get the app.</h2>
-          <p>Android 11+ and an invitation code.</p>
-          <div class="download-panel">
-            <a id="apk-download" class="button primary download-button" aria-disabled="true">Download app <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
-            <p id="download-note" role="status">Ask the app owner for the current APK.</p>
-            <p id="download-meta" class="fine-print" hidden></p>
-            <p id="download-recommendation" class="fine-print" role="status" hidden></p>
-            <div id="phone-match-alert" class="phone-match-alert" role="alert" hidden>
-              <strong>Phone model not matched</strong>
-              <p>Choose your phone below, or use Universal.</p>
-              <button id="choose-phone-model" class="button secondary" type="button" aria-controls="phone-picker" aria-expanded="false">Choose make and model</button>
-            </div>
-            <details id="phone-picker" class="download-options">
-              <summary>Choose phone model</summary>
-              <label for="phone-model">Make, model or model number</label>
-              <input id="phone-model" type="text" list="phone-models" maxlength="120" autocomplete="off" placeholder="e.g. Samsung Galaxy A52">
-              <datalist id="phone-models"></datalist>
-              <p class="fine-print">Find the model in Settings → About phone. <a href="device-catalog-sources.md">Catalog sources</a></p>
-            </details>
-            <details id="download-options" class="download-options" hidden>
-              <summary>All APK options</summary>
-              <ul id="download-options-list"></ul>
-              <p class="fine-print">Model matches are estimates. Unsure? Choose Universal.</p>
-            </details>
-            <p class="fine-print"><a href="updates.html">What’s new</a> · Do not uninstall while uploads are pending.</p>
-            <noscript><p class="fine-print">Enable JavaScript or ask the owner for the APK.</p></noscript>
-          </div>
-          <details class="installation-help"><summary>Installation help</summary><div>
-            <p>Allow installation from your browser if prompted. Keep Android security checks enabled; you can turn off the installation permission afterward.</p>
-            <p>If an update is rejected, keep the existing app and contact the owner. Never clear app data while evidence is pending.</p>
-          </div></details>
+          <p>Download here. Connect and choose your recipients inside the app.</p>
+          <p class="install-requirements">For Android 11 or later · Invitation needed to connect</p>
         </div>
-        <ol class="installation-steps">
-          <li><span class="installation-number">1</span><div><h3>Download</h3><p>Save the APK from this page.</p></div></li>
-          <li><span class="installation-number">2</span><div><h3>Install</h3><p>Open the file and follow Android’s prompts.</p></div></li>
-          <li id="connect"><span class="installation-number">3</span><div><h3>Connect</h3><p>Open your invitation link, or enter its code under <strong>Connect this phone</strong>. Wait for confirmation.</p></div></li>
-          <li><span class="installation-number">4</span><div><h3>Complete setup</h3><p>Allow camera, microphone and precise location. Review all recipients, including the default recipient, then run the test.</p></div></li>
+        <ol class="install-flow">
+          <li class="install-stage">
+            <div class="install-stage-heading"><span class="installation-number" aria-hidden="true">1</span><div><h3>Download Evidence Recorder</h3><p>One app, different file sizes. Use the highlighted download.</p><p class="stage-context">On this website · No personal details needed</p></div></div>
+            <div class="download-panel">
+              <div class="download-choice"><strong id="download-kind">Android APK</strong><span>Selected download</span></div>
+              <a id="apk-download" class="button primary download-button" data-layout="guided" aria-disabled="true"><span id="download-label">Download Evidence Recorder</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
+              <p id="download-meta" class="fine-print" hidden></p>
+              <p id="download-note" role="status">Ask the app owner for the current APK.</p>
+              <p id="download-recommendation" class="fine-print" role="status" hidden></p>
+              <button id="use-universal" class="text-button" type="button" hidden>Use Universal instead</button>
+              <div id="phone-match-alert" class="phone-match-alert" role="alert" hidden>
+                <strong>We couldn’t identify your phone</strong>
+                <p>Universal is ready to download. Choosing your model is optional and may find a smaller file.</p>
+                <button id="choose-phone-model" class="text-button" type="button" aria-controls="phone-picker" aria-expanded="false">Choose my phone model</button>
+              </div>
+              <details id="phone-picker" class="download-options">
+                <summary>Optional: find a smaller download</summary>
+                <label for="phone-model">Phone make or model</label>
+                <input id="phone-model" type="text" list="phone-models" maxlength="120" autocomplete="off" placeholder="e.g. Samsung Galaxy A52">
+                <datalist id="phone-models"></datalist>
+                <p class="fine-print">Settings → About phone. Matching stays in your browser. <a href="device-catalog-sources.md">Sources</a></p>
+              </details>
+              <details id="download-options" class="download-options" hidden>
+                <summary>All files &amp; technical details</summary>
+                <ul id="download-options-list"></ul>
+                <p class="fine-print">All files install the same app. Model matches are estimates; use Universal if unsure.</p>
+              </details>
+              <p class="download-footer"><a href="updates.html">What’s new</a></p>
+              <noscript><p class="fine-print">Enable JavaScript or ask the owner for the APK.</p></noscript>
+            </div>
+          </li>
+          <li class="install-stage">
+            <div class="install-stage-heading"><span class="installation-number" aria-hidden="true">2</span><div><h3>Install the downloaded file</h3><p>Open the .apk file in Downloads, tap <strong>Install</strong>, then open <strong>Evidence Recorder</strong>.</p><p class="stage-context">On your Android phone</p></div></div>
+            <div class="install-stage-body">
+              <p class="install-update-note"><strong>Updating?</strong> Install over the existing app. Keep it installed and keep its data while uploads are pending.</p>
+              <details class="installation-help"><summary>Android installation help</summary><div>
+                <p>If asked, allow installation from your browser. Keep Android security checks enabled. You can turn the installation permission off afterward.</p>
+                <p>If Android rejects the update, keep the existing app and contact the owner.</p>
+              </div></details>
+            </div>
+          </li>
+          <li class="install-stage" id="connect">
+            <div class="install-stage-heading"><span class="installation-number" aria-hidden="true">3</span><div><h3>Connect and finish setup</h3><p>Follow the app’s setup screens. This is where your invitation and recipient details are needed.</p><p class="stage-context">Inside Evidence Recorder</p></div></div>
+            <div class="install-stage-body">
+              <dl class="setup-checklist">
+                <div><dt>Connect</dt><dd>Reopen your private invitation link, or enter its code under <strong>Connect this phone</strong>. Wait for confirmation.</dd></div>
+                <div><dt>Recipients</dt><dd>Add your loved ones’ email addresses if you want personal recipients. Review the default administrator copy and sharing delay.</dd></div>
+                <div><dt>Permissions</dt><dd>Allow camera, microphone and precise location when the app asks.</dd></div>
+                <div><dt>Test</dt><dd>Run the guided test and review its results before relying on the app.</dd></div>
+              </dl>
+              <p class="invitation-note"><strong>No invitation yet?</strong> Ask the app owner. You can download now; connecting needs an invitation.</p>
+            </div>
+          </li>
         </ol>
       </div>
     </section>
