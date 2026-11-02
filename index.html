@@ -9,26 +9,35 @@
   <meta name="theme-color" content="#ffffff">
   <title>Evidence Recorder — Keep evidence beyond your phone</title>
   <link rel="icon" href="icon.svg?v=pakistan-green-20261030" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=804.1.5-architectures">
-  <script src="site-config.js?v=804.1.5-architectures" defer></script>
-  <script src="main.js?v=804.1.5-architectures" defer></script>
+  <link rel="stylesheet" href="styles.css?v=apk-models-alert-20261102">
+  <script src="site-config.js?v=804.1.5-models-20261102" defer></script>
+  <script src="device-catalog.js?v=20261102" defer></script>
+  <script src="apk-recommendation.js?v=20261102" defer></script>
+  <script src="main.js?v=apk-models-alert-20261102" defer></script>
+  <script src="nav.js?v=protection-20261101" defer></script>
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header wrap">
-    <a class="wordmark" href="#main" aria-label="Evidence Recorder home">
-      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="7" fill="currentColor"/><circle cx="15" cy="15" r="7" fill="white"/><circle cx="15" cy="15" r="3" fill="currentColor"/></svg>
-      <span>Evidence Recorder</span>
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="#how-it-works">How it works</a>
-      <a href="#data">Data use</a>
-      <a class="nav-install" href="#install">Get the app <span aria-hidden="true">↗</span></a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="wordmark" href="#main" aria-label="Evidence Recorder home">
+        <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="7" fill="currentColor"/><circle cx="15" cy="15" r="7" fill="white"/><circle cx="15" cy="15" r="3" fill="currentColor"/></svg>
+        <span>Evidence Recorder</span>
+      </a>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#protection">Protection report</a>
+        <a class="nav-install" href="#install">Get the app <span aria-hidden="true">↗</span></a>
+        <a href="#data">Data use</a>
+        <a href="#tips">Before recording</a>
+        <a href="#questions">Questions</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
+    <section class="hero wrap" id="overview" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">Android · Private cloud backup · Timed email sharing</p>
         <h1 id="hero-title">Record fascism.<br><span>Keep evidence<br class="desktop-break"> beyond your phone.</span></h1>
@@ -63,7 +72,7 @@
 
     <div class="facts wrap" aria-label="Key features">
       <p><strong>Record through screen lock</strong><span>Start with the app open and the phone unlocked.</span></p>
-      <p><strong>Upload as you record</strong><span>Short clips reach the cloud before recording ends.</span></p>
+      <p><strong>Upload as you record</strong><span>Short clips reach the cloud before recording ends. After video, selected audio backs up; full audio stays local.</span></p>
       <p><strong>Share after a delay</strong><span>Cancel before the server deadline to prevent automatic email.</span></p>
     </div>
 
@@ -79,9 +88,9 @@
         <summary>Read the steps as text</summary>
         <ol>
           <li><strong>Choose contacts and a delay.</strong> Save your trusted contacts and release delay in the app. The six-hour delay shown is an example.</li>
-          <li><strong>Start recording.</strong> Start with the app open and the phone unlocked, then lock it normally. On the Galaxy A07, the rear camera records with continuous microphone audio.</li>
+          <li><strong>Start recording.</strong> Start with the app open and the phone unlocked, then lock it normally. On the Galaxy A07, the rear camera records with continuous microphone audio. Video stops at your selected 10–30-minute limit; audio then continues through silence until 10% battery or an earlier stop. After the video phase, only selected or uncertain audio is uploaded; full audio stays on the phone.</li>
           <li><strong>Check backup and timer.</strong> With internet access, clips upload to private cloud storage and the server verifies them. Cloud verification and remote-timer confirmation are separate. Without server confirmation, there is no remote timer. A timer already confirmed can continue while the phone is offline.</li>
-          <li><strong>Stop recording or cancel sharing.</strong> The countdown starts when video stops, recording ends, or the server detects an interruption; upload completion is not required to start it. Audio can continue after the video cutoff. Stopping recording does not cancel sharing. To prevent automatic email, cancel before the deadline and wait for server confirmation.</li>
+          <li><strong>Stop recording or cancel sharing.</strong> At the video cutoff, the acknowledged countdown starts while audio may continue. A confirmed stop or a detected interruption also starts the countdown; upload completion is not required to start it. Stopping recording does not cancel sharing. To prevent automatic email, cancel before the deadline and wait for server confirmation.</li>
           <li><strong>Email to your contacts.</strong> If you do not cancel, email attempts wait for the deadline and a verified combined video. The email links to the recording. Provider acceptance does not confirm delivery or reading.</li>
         </ol>
       </details>
@@ -89,17 +98,54 @@
       <p class="section-note">Release checks run every 20 minutes. Email can follow the deadline by almost 20 minutes, plus processing and provider time.</p>
     </section>
 
+    <section id="protection" class="section wrap protection-section" aria-labelledby="protection-title">
+      <div class="protection-layout">
+        <div class="section-heading">
+          <p class="section-number">02 / Protection report</p>
+          <h2 id="protection-title">What a private report shows.</h2>
+          <p>One protected link. Available media, known coverage and limits, with originals and hashes available when needed.</p>
+        </div>
+        <div class="report-preview" aria-hidden="true">
+          <div class="preview-bar"><span class="preview-dot"></span><span>Private report</span><span class="preview-pill">Sample</span></div>
+          <div class="preview-actions"><span class="preview-play">▶</span><span>Watch</span><span class="preview-chip">Save a copy</span><span class="preview-chip">Location</span></div>
+          <div class="preview-track"><span class="preview-fill"></span><span class="preview-gap"></span><span class="preview-fill short"></span></div>
+          <div class="preview-lines"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <ol class="evidence-flow">
+        <li><span>01</span><div><h3>Play what exists</h3><p>Protected original clips and a combined video, loaded only when selected.</p></div></li>
+        <li><span>02</span><div><h3>See the limits</h3><p>Known intervals and gaps stay labelled. Missing cloud audio is not silence.</p></div></li>
+        <li><span>03</span><div><h3>Keep a copy</h3><p>One ZIP with the stitched video, verified post-video audio, location files and checksums.</p></div></li>
+      </ol>
+      <p class="section-note">Updated private-report features are not live yet. This example uses generated video and tones, with no real evidence or location.</p>
+      <p><a class="button primary" href="sample-report/">Open the fictional sample report <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></p>
+    </section>
+
     <section id="install" class="install-section" aria-labelledby="install-title">
       <div class="section wrap install-grid">
-        <div class="install-intro"><p class="section-number">02 / Install and connect</p><h2 id="install-title">Set up once.<br>Be ready to record.</h2><p>You will need an Android phone, internet access, and the connection code from the app owner.</p>
+        <div class="install-intro"><p class="section-number">03 / Install and connect</p><h2 id="install-title">Set up once.<br>Be ready to record.</h2><p>You will need an Android phone, internet access, and the connection code from the app owner.</p>
           <div class="download-panel">
             <a id="apk-download" class="button primary download-button" aria-disabled="true">Download Android APK <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
             <p id="download-note" role="status">The APK download has not been published yet. Ask the app owner for the current installation file.</p>
             <p id="download-meta" class="fine-print" hidden></p>
+            <p id="download-recommendation" class="fine-print" role="status" hidden></p>
+            <div id="phone-match-alert" class="phone-match-alert" role="alert" hidden>
+              <strong>Phone model not matched</strong>
+              <p>Select your phone make and model to check for a smaller APK. You can still use Universal.</p>
+              <button id="choose-phone-model" class="button secondary" type="button" aria-controls="phone-picker" aria-expanded="false">Choose make and model</button>
+            </div>
             <details id="download-options" class="download-options" hidden>
               <summary>Other download options</summary>
               <ul id="download-options-list"></ul>
-              <p class="fine-print">The universal APK is the safe choice if unsure. Automatic selection uses limited browser information, not a compatibility guarantee.</p>
+              <p class="fine-print">Universal is the safe choice if unsure. Model-based suggestions are estimates, not a compatibility guarantee. All matching happens on this page; your model is not sent anywhere.</p>
+            </details>
+            <details id="phone-picker" class="download-options">
+              <summary>Find my phone model</summary>
+              <label for="phone-model">Phone make, model or exact model number</label>
+              <input id="phone-model" type="text" list="phone-models" maxlength="120" autocomplete="off" placeholder="e.g. SM-A525F">
+              <datalist id="phone-models"></datalist>
+              <p class="fine-print">253 phone profiles, matched locally. <a href="device-catalog-sources.md">Sources and limits</a></p>
+              <p class="fine-print">Choose an exact match or enter the model number from Settings → About phone. Unknown or ambiguous models use Universal. A model match does not verify camera or recording support.</p>
             </details>
             <p class="fine-print"><a href="updates.html">What’s new in the latest update</a></p>
             <noscript><p class="fine-print">JavaScript is off. Ask the app owner for the current APK download.</p></noscript>
@@ -110,13 +156,13 @@
           <li><span class="installation-number">1</span><div><h3>Download the app</h3><p>Use the download button or the APK supplied by the app owner. An APK is an Android installation file.</p></div></li>
           <li><span class="installation-number">2</span><div><h3>Install the APK</h3><p>Open the downloaded file. If Android asks, allow installation from that browser or file app, then tap <strong>Install</strong>.</p><p class="fine-print">Settings vary by phone. You can turn off that installation permission afterward. Keep Android security checks enabled.</p><p class="fine-print">If Android reports an incompatible update, keep your existing app and contact the app owner. Do not uninstall while recordings or uploads are pending.</p></div></li>
           <li id="connect"><span class="installation-number">3</span><div><h3>Connect this phone</h3><p>Return to your private invitation link or scan its QR code, then tap <strong>Connect this phone</strong>. Confirm <strong>Connect</strong> in the app.</p><p class="fine-print">You can also open <strong>Evidence Recorder</strong>, tap <strong>Connect this phone</strong> and enter your eight-character code. Wait for <strong>Phone connected</strong>.</p></div></li>
-          <li><span class="installation-number">4</span><div><h3>Complete setup in the app</h3><p>Allow the camera and microphone. Allow location if you want location evidence. Follow the app&rsquo;s notification and battery guidance.</p><p>Choose your video quality. For automatic email, save your contacts and release delay. Read the sharing disclosure before enabling it.</p></div></li>
+          <li><span class="installation-number">4</span><div><h3>Complete setup in the app</h3><p>Allow the camera and microphone. Precise location permission and phone location services are currently required before recording; missing, stale or denied fixes stay explicit. Follow the app&rsquo;s notification and battery guidance.</p><p>Choose your video quality. For automatic email, save your contacts and sharing countdown. The app shows the effective recipients, including the default recipient, before the demo and while you choose recipients. The default recipient is included in new recordings; historical recordings keep their original audience.</p></div></li>
         </ol>
       </div>
     </section>
 
     <section id="data" class="section wrap" aria-labelledby="data-title">
-      <div class="section-heading"><p class="section-number">03 / Mobile data</p><h2 id="data-title">Ten minutes of video.<br>Here is the upload size.</h2><p>These estimates include microphone audio and one active camera at a time, as used by the Galaxy A07.</p></div>
+      <div class="section-heading"><p class="section-number">04 / Mobile data</p><h2 id="data-title">Ten minutes of video.<br>Here is the upload size.</h2><p>These estimates include microphone audio and one active camera at a time, as used by the Galaxy A07.</p></div>
       <div class="quality-grid">
         <article class="quality-option"><div class="quality-heading"><h3>Economy</h3><span>480p · 15 FPS requested</span></div><p class="data-amount">25–30 <span>MB</span></p><p>Smaller uploads. A useful starting point for mobile data.</p><div class="data-bar" aria-hidden="true"><span class="economy-bar"></span></div><p class="codec-note"><span>HEVC: 24.6 MB</span><span>H.264: 29.9 MB</span></p></article>
         <article class="quality-option"><div class="quality-heading"><h3>Standard</h3><span>720p · 15 FPS requested</span></div><p class="data-amount">40–49 <span>MB</span></p><p>More image detail. Uses more mobile data.</p><div class="data-bar" aria-hidden="true"><span class="standard-bar"></span></div><p class="codec-note"><span>HEVC: 39.6 MB</span><span>H.264: 48.6 MB</span></p></article>
@@ -126,7 +172,7 @@
     </section>
 
     <section id="tips" class="section wrap tips-section" aria-labelledby="tips-title">
-      <div class="section-heading"><p class="section-number">04 / Before you need it</p><h2 id="tips-title">A few checks<br>make a difference.</h2></div>
+      <div class="section-heading"><p class="section-number">05 / Before you need it</p><h2 id="tips-title">A few checks<br>make a difference.</h2></div>
       <div class="tips-grid">
         <article><span class="tip-number">01</span><h3>Try a short recording</h3><p>Check the camera, microphone, uploads, and readiness results. Make sure you understand the timer controls before relying on them.</p></article>
         <article><span class="tip-number">02</span><h3>Check the confirmed states</h3><p>A file saved on your phone is not yet a verified cloud copy. Saved email settings are not a confirmed server timer.</p></article>
@@ -136,14 +182,16 @@
     </section>
 
     <section id="questions" class="section wrap questions-section" aria-labelledby="questions-title">
-      <div class="section-heading"><p class="section-number">05 / Questions</p><h2 id="questions-title">Good to know.</h2></div>
+      <div class="section-heading"><p class="section-number">06 / Questions</p><h2 id="questions-title">Good to know.</h2></div>
       <div class="questions">
-        <details><summary>Does recording continue when I lock the screen?</summary><div><p>Yes, during normal screen lock. Start recording while the phone is unlocked and the app is visible. Video stops at your selected limit of 10–30 minutes. The phone then continues audio capture until the battery reaches 10%, or an earlier stop condition. Speech detection selects audio clips for upload. You can stop earlier after unlocking.</p></div></details>
+        <details><summary>Does recording continue when I lock the screen?</summary><div><p>Yes, during normal screen lock. Start recording while the phone is unlocked and the app is visible. Video stops at your selected limit of 10–30 minutes. The phone then continues audio capture through silence until the battery reaches 10%, or an earlier stop condition. After the video phase, only speech-selected or uncertain audio is uploaded; complete audio stays on the phone. The 10% reserve does not guarantee that pending uploads finish. You can stop earlier after unlocking.</p></div></details>
         <details><summary>Does it record both cameras at the same time?</summary><div><p>The Galaxy A07 records the rear camera and microphone. It does not alternate cameras.</p><p>On other phones, the app checks simultaneous front and rear recording after camera and microphone permissions are given. If it cannot confirm support, it uses the rear camera only. S23 FE support is not yet verified.</p></div></details>
-        <details><summary>What happens without internet access?</summary><div><p>The phone can save recordings locally. Pending uploads retry when internet access returns, subject to Android restrictions.</p><p>There is no remote timer until the server confirms it. If a timer is already confirmed, a lost connection can cause the server to detect an interruption.</p></div></details>
+        <details><summary>What happens without internet access?</summary><div><p>The phone can save recordings locally. Pending uploads retry when internet access returns, subject to Android restrictions. Full audio and files that never upload stay local; the server cannot see them.</p><p>There is no remote timer until the server confirms it. The video cutoff starts the acknowledged sharing countdown while audio may continue. If a timer is already confirmed, a lost connection can cause the server to detect an interruption.</p></div></details>
         <details><summary>What if my connection code is expired or already used?</summary><div><p>Your private invitation page can check its status without using it. The app checks again when you confirm the connection. Ask the app owner for a new invitation if it has expired or was used by another phone.</p><p>Each invitation connects one phone and is valid for 48 hours after creation. Its expiry does not expire a saved phone connection.</p></div></details>
-        <details><summary>What happens if the phone turns off?</summary><div><p>Recording stops. Previously finalized clips remain available for upload. After one-time setup while unlocked, the updated app can upload pending clips after a restart before the first unlock. Android scheduling and network availability can delay uploads. Cameras do not restart automatically.</p><p>After Android force-stop, open the app again to resume upload scheduling. The unfinished last clip can be lost.</p></div></details>
-        <details><summary>Who can see my recordings?</summary><div><p>Recordings upload to private AWS storage. Automatic sharing sends trusted contacts expiring access links. Anyone who receives a forwarded link can use it until access expires.</p><p>New automatic-email recordings include an administrator copy after the app discloses it and you accept. Read that disclosure before enabling sharing.</p><p>This public webpage contains installation guidance only. It does not access your recordings, connection code, or account credentials.</p></div></details>
+        <details><summary>What happens if the phone turns off?</summary><div><p>Recording stops. Previously finalized clips remain available for upload. After one-time unlocked storage preparation, the app can resume pending uploads after a restart before the first unlock. Android scheduling, network and battery conditions can delay uploads. Cameras and microphone never restart automatically.</p><p>After Android force-stop, open the app again to resume upload scheduling. The unfinished last clip can be lost. There is no absolute capture guarantee.</p></div></details>
+        <details><summary>Who can see my recordings?</summary><div><p>Recordings upload to private AWS storage. Automatic sharing sends trusted contacts expiring access links. Anyone who receives a forwarded link can use it until access expires. The app shows the effective recipients, including the default recipient, before the demo and while you choose recipients.</p><p>New automatic-email recordings include an administrator copy after the app discloses it before recording. Historical recordings keep their frozen audience.</p><p>This public webpage contains installation guidance and a fictional sample only. It does not access your recordings, connection code or account credentials, and it lists no real contact details.</p></div></details>
+        <details><summary>How long do links and recordings last?</summary><div><p>Recipient access links expire. New canceled sessions default to seven-day deletion unless kept. Released footage becomes eligible for archival after 30 days, and recipient link access ends when archival begins. Historical sessions keep their frozen retention policy.</p></div></details>
+        <details><summary>What happens if someone takes the phone?</summary><div><p>An already active recording can continue if someone takes the phone. Start from the visible, unlocked app; normal screen lock keeps it running. The app cannot detect phone confiscation or activate the microphone remotely. Power loss, force-stop or another interruption can stop capture; the server can only report what it observed.</p></div></details>
       </div>
     </section>
 

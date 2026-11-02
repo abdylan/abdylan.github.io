@@ -114,44 +114,95 @@
     options.hidden = ready.length < 2;
   }
 
-  function decision(values) {
-    if (!values || typeof values !== "object") return null;
-    const architecture = typeof values.architecture === "string" ? values.architecture.trim().toLowerCase() : "";
-    const bitness = values.bitness === undefined || values.bitness === null ? "" : String(values.bitness).trim();
-    if (architecture === "arm" && bitness === "64") return "arm64";
-    if (architecture === "arm" && bitness === "32") return "arm32";
-    return null;
+  const matcher = window.EvidenceApkRecommendation;
+  const catalog = window.EVIDENCE_DEVICE_CATALOG || {};
+  const explanation = document.getElementById("download-recommendation");
+  const modelInput = document.getElementById("phone-model");
+  const modelList = document.getElementById("phone-models");
+  const matchAlert = document.getElementById("phone-match-alert");
+  const chooseModel = document.getElementById("choose-phone-model");
+  const modelPicker = document.getElementById("phone-picker");
+  const browser = typeof navigator === "undefined" ? {} : navigator;
+  let lastHints = {};
+
+  function applyRecommendation(result, settled = true) {
+    if (!result) return;
+    if (matchAlert) matchAlert.hidden = !(settled && !result.unsupported
+      && result.basis === "fallback" && result.reason === "unconfirmed");
+    if (result.unsupported) {
+      download.removeAttribute("href");
+      download.setAttribute("aria-disabled", "true");
+      if (explanation) { explanation.hidden = false; explanation.textContent = "Android 11 or later is required. This phone reports an older Android version."; }
+      return;
+    }
+    const available = result.id === "universal" ? universal : architectureVariants[result.id];
+    selectPrimary(available || universal);
+    if (!explanation) return;
+    explanation.hidden = false;
+    explanation.textContent = !available || result.id === "universal"
+      ? "Architecture could not be confirmed. Universal is recommended."
+      : result.basis === "model"
+        ? `${result.model}: ${labels[result.id]} suggested from the phone model. Android compatibility is not confirmed; use Universal if installation fails.`
+        : `${labels[result.id]} suggested from browser CPU information. Universal is also available.`;
   }
 
   function recommend() {
     if (manualChoice || (!architectureVariants.arm64 && !architectureVariants.arm32)) return;
-    if (typeof navigator === "undefined" || typeof setTimeout !== "function") return;
-    const agent = navigator.userAgentData;
-    if (!agent || agent.platform !== "Android" || typeof agent.getHighEntropyValues !== "function") return;
-
+    const fallback = () => matcher?.recommend(browser, {}, catalog) || { id: "universal" };
+    const agent = browser.userAgentData;
+    const canAsk = agent?.platform === "Android" && typeof agent.getHighEntropyValues === "function";
+    applyRecommendation(fallback(), !canAsk);
+    if (!canAsk) return;
     let settled = false;
     let timer = null;
-    const finish = (id) => {
+    const finish = values => {
       if (settled) return;
       settled = true;
       if (timer !== null && typeof clearTimeout === "function") clearTimeout(timer);
       if (manualChoice) return;
-      selectPrimary((id && architectureVariants[id]) || universal);
+      lastHints = values || {};
+      const result = matcher?.recommend(browser, lastHints, catalog);
+      if (result) applyRecommendation(result);
+      else {
+        const id = values?.architecture === "arm" ? ({ "64": "arm64", "32": "arm32" })[String(values?.bitness)] : null;
+        selectPrimary((id && architectureVariants[id]) || universal);
+      }
     };
-
     timer = setTimeout(() => finish(null), 1000);
-    let request;
     try {
-      request = agent.getHighEntropyValues(["architecture", "bitness"]);
-    } catch {
-      finish(null);
-      return;
+      const request = agent.getHighEntropyValues(["architecture", "bitness", "model", "platformVersion"]);
+      if (!request || typeof request.then !== "function") finish(null);
+      else request.then(finish, () => finish(null));
+    } catch { finish(null); }
+  }
+
+  if (chooseModel && modelPicker && modelInput) {
+    chooseModel.addEventListener("click", () => {
+      modelPicker.open = true;
+      chooseModel.setAttribute("aria-expanded", "true");
+      modelInput.value = "";
+      modelInput.scrollIntoView({ block: "center", behavior: "auto" });
+      modelInput.focus();
+      try { modelInput.showPicker?.(); } catch { /* Focused, searchable input remains usable. */ }
+    });
+    modelPicker.addEventListener("toggle", () => chooseModel.setAttribute("aria-expanded", String(modelPicker.open)));
+  }
+
+  if (modelInput && matcher) {
+    if (modelList && Array.isArray(catalog.devices)) {
+      const names = [...new Set(catalog.devices.map(row => row.name))].sort();
+      for (const name of names) {
+        const option = document.createElement("option"); option.value = name; modelList.appendChild(option);
+      }
     }
-    if (!request || typeof request.then !== "function") {
-      finish(null);
-      return;
-    }
-    request.then((values) => finish(decision(values)), () => finish(null));
+    modelInput.addEventListener("change", () => {
+      manualChoice = true;
+      // Manual exact model selection remains available when the browser hides its model.
+      const result = matcher.modelDecision([modelInput.value], catalog);
+      if (lastHints.platformVersion && matcher.recommend(browser, lastHints, catalog).unsupported)
+        applyRecommendation(matcher.recommend(browser, lastHints, catalog));
+      else applyRecommendation(result);
+    });
   }
 
   if (typeof download.addEventListener === "function") {

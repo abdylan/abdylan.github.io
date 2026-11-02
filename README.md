@@ -72,3 +72,19 @@ files so users can choose manually. Browser information is a recommendation, not
 a compatibility guarantee. All three APKs use the same release version and signer.
 
 804.1.5 signed downloads: ARM64 17.2 MB; ARM32 16.5 MB; universal 40.2 MB.
+
+
+## Phone-matched downloads and report preview
+
+The download pages check available browser CPU/model information and a local
+catalog of 253 phone profiles (1,498 exact aliases). Model suggestions are
+estimates; unknown or ambiguous phones retain Universal. An unmatched-phone alert
+opens the searchable make/model selector in one tap. Matching stays in the browser
+without telemetry or an external fingerprint service. Source attribution and
+limitations: [device catalog](device-catalog-sources.md).
+
+The homepage now has fixed section navigation and a [fictional report example](sample-report/)
+with generated media and a demo evidence download. Updated private-report features
+are a preview and are not live on the evidence backend yet. This website update
+changes no enrollment, recording, recipient settings or real evidence access.
+The APK download remains the already-published 804.1.5 release.
