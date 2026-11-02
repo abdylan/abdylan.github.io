@@ -3,6 +3,27 @@
   "packageName": "app.evidence.diagnostic",
   "releases": [
     {
+      "versionCode": 21,
+      "versionName": "804.1.6",
+      "published": true,
+      "minSdk": 30,
+      "apkUrl": "https://github.com/abdylan/abdylan.github.io/releases/download/android-804.1.6-20261102/evidence-recorder-804.1.6-release.apk",
+      "changes": {
+        "en": [
+          "New email sessions check for more evidence one and seven days after initial sharing.",
+          "Updated emails keep the full report and show what changed since the last accepted report.",
+          "No additional email is sent when the evidence is unchanged."
+        ],
+        "ur": [
+          "نئی ای میل نشستوں میں ابتدائی اشتراک کے ایک اور سات دن بعد مزید شواہد کی جانچ ہوتی ہے۔",
+          "تازہ ای میل میں مکمل رپورٹ اور آخری قبول شدہ رپورٹ کے بعد کی تبدیلیاں دکھائی جاتی ہیں۔",
+          "شواہد میں تبدیلی نہ ہو تو مزید ای میل نہیں بھیجی جاتی۔"
+        ]
+      },
+      "apkBytes": 40204843,
+      "apkSha256": "5c2ba50b30e1e7818ed3c0ee8106e684a72838e234934622c664a095a622f67a"
+    },
+    {
       "versionCode": 20,
       "versionName": "804.1.5",
       "published": true,
