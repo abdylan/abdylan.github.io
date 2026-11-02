@@ -3,6 +3,27 @@
   "packageName": "app.evidence.diagnostic",
   "releases": [
     {
+      "versionCode": 22,
+      "versionName": "804.1.7",
+      "published": true,
+      "minSdk": 30,
+      "apkUrl": "https://github.com/abdylan/abdylan.github.io/releases/download/android-804.1.7-20261102/evidence-recorder-804.1.7-release.apk",
+      "changes": {
+        "en": [
+          "Start recording without waiting for a camera check.",
+          "Pending camera checks run while Settings is open and the phone is idle.",
+          "Starting a recording cancels an ongoing check and uses the available camera profile."
+        ],
+        "ur": [
+          "کیمرے کی جانچ کا انتظار کیے بغیر ریکارڈنگ شروع کریں۔",
+          "باقی کیمرہ جانچ ترتیبات کھلی ہونے اور فون فارغ ہونے پر چلتی ہے۔",
+          "ریکارڈنگ شروع کرنے پر جاری جانچ منسوخ ہوتی ہے اور دستیاب کیمرہ ترتیب استعمال ہوتی ہے۔"
+        ]
+      },
+      "apkBytes": 40208939,
+      "apkSha256": "410a103de640e3080f8449276a633064569e5abf4d417ee0c76bccfd0daf459d"
+    },
+    {
       "versionCode": 21,
       "versionName": "804.1.6",
       "published": true,

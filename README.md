@@ -3,7 +3,7 @@
 Public welcome and Android installation guide: https://abdylan.github.io/
 
 Download the signed Android release from the website or GitHub Releases.
-The current APK is version 804.1.6 (40.2 MB), with debugging disabled.
+The current APK is version 804.1.7 (40.2 MB), with debugging disabled.
 Daily checks show a quiet reminder when a newer compatible update is available.
 See what changed and download from Settings → App updates. Release notes are
 available offline and at https://abdylan.github.io/updates.html .
