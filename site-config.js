@@ -1,10 +1,23 @@
-/* Public settings only. Never put connection codes, credentials or signed URLs here. */
+/* Verified public release metadata only. */
 window.EVIDENCE_SITE = Object.freeze({
-  // Set this to a public HTTPS APK URL (for example, a GitHub Release asset),
-  // or a relative path to an APK you have deliberately included in the website.
-  // Empty disables the download button until a release is available.
-  apkUrl: "https://github.com/abdylan/abdylan.github.io/releases/download/android-804.1.4-20261101/evidence-recorder-804.1.4-release.apk",
-  // Confirmed metadata for this exact signed release APK.
-  appVersion: "804.1.4",
-  apkSizeMb: 40.139251
+  "apkUrl": "https://github.com/abdylan/abdylan.github.io/releases/download/android-804.1.5-20261101/evidence-recorder-804.1.5-release.apk",
+  "appVersion": "804.1.5",
+  "apkSizeMb": 40.184363,
+  "variants": {
+    "arm64": {
+      "apkUrl": "https://github.com/abdylan/abdylan.github.io/releases/download/android-804.1.5-20261101/evidence-recorder-804.1.5-arm64-v8a-release.apk",
+      "appVersion": "804.1.5",
+      "apkSizeMb": 17.193049
+    },
+    "arm32": {
+      "apkUrl": "https://github.com/abdylan/abdylan.github.io/releases/download/android-804.1.5-20261101/evidence-recorder-804.1.5-armeabi-v7a-release.apk",
+      "appVersion": "804.1.5",
+      "apkSizeMb": 16.549981
+    },
+    "universal": {
+      "apkUrl": "https://github.com/abdylan/abdylan.github.io/releases/download/android-804.1.5-20261101/evidence-recorder-804.1.5-release.apk",
+      "appVersion": "804.1.5",
+      "apkSizeMb": 40.184363
+    }
+  }
 });

@@ -3,6 +3,31 @@
   "packageName": "app.evidence.diagnostic",
   "releases": [
     {
+      "versionCode": 20,
+      "versionName": "804.1.5",
+      "published": true,
+      "minSdk": 30,
+      "apkUrl": "https://github.com/abdylan/abdylan.github.io/releases/download/android-804.1.5-20261101/evidence-recorder-804.1.5-release.apk",
+      "changes": {
+        "en": [
+          "Download updates inside the app and install after verification.",
+          "See improvements from updates you skipped under Also included.",
+          "Choose Remind me tomorrow to hide an update reminder for a day.",
+          "Download a smaller APK matched to your phone, with a universal fallback.",
+          "See cloud connection status and your recording count more clearly."
+        ],
+        "ur": [
+          "ایپ کے اندر تازہ کاری ڈاؤن لوڈ کریں اور تصدیق کے بعد نصب کریں۔",
+          "مزید شامل میں چھوڑی گئی تازہ کاریوں کی بہتریاں دیکھیں۔",
+          "تازہ کاری کی یاد دہانی ایک دن کے لیے چھپانے کو کل یاد دلائیں منتخب کریں۔",
+          "اپنے فون کے مطابق چھوٹی APK ڈاؤن لوڈ کریں؛ ضرورت پر یونیورسل فائل دستیاب ہے۔",
+          "کلاؤڈ کنکشن کی حالت اور ریکارڈنگ کی تعداد زیادہ واضح دیکھیں۔"
+        ]
+      },
+      "apkBytes": 40184363,
+      "apkSha256": "eafe850b3247663e0dedfc4177d881b597928ee8f325c213203ed1dd722b8770"
+    },
+    {
       "versionCode": 19,
       "versionName": "804.1.4",
       "published": true,

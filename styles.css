@@ -237,3 +237,9 @@ details > div { max-width: 70ch; padding-bottom: 22px; color: var(--muted); font
   h2, h3 { break-after: avoid; }
   article, .process-grid li, .installation-steps li { break-inside: avoid; }
 }
+
+.download-options { margin-top: 12px; }
+.download-options summary { padding-block: 8px; font-size: 14px; color: var(--accent); }
+.download-options ul { margin: 2px 0 10px; padding-left: 20px; font-size: 14px; }
+.download-options li { margin: 6px 0; }
+.download-options .fine-print, .download-options .step-note { margin-top: 4px; }

@@ -3,7 +3,7 @@
 Public welcome and Android installation guide: https://abdylan.github.io/
 
 Download the signed Android release from the website or GitHub Releases.
-The current APK is version 804.1.4 (40.1 MB), with debugging disabled.
+The current APK is version 804.1.5 (40.2 MB), with debugging disabled.
 Daily checks show a quiet reminder when a newer compatible update is available.
 See what changed and download from Settings → App updates. Release notes are
 available offline and at https://abdylan.github.io/updates.html .
@@ -62,3 +62,13 @@ Stopping recording does not cancel sharing. Email attempts wait for the release
 deadline and a verified combined video. Provider acceptance does not confirm delivery.
 The [welcome page](https://abdylan.github.io/#how-it-works) includes a text version
 and a link to the full-size image. The six-hour setting is an example.
+
+## Architecture downloads
+
+The download page recommends an ARM64 or ARM32 APK when Android browser hints
+provide architecture and bitness. When those hints are missing or uncertain, it
+keeps the universal APK selected. Other download options always lists the three
+files so users can choose manually. Browser information is a recommendation, not
+a compatibility guarantee. All three APKs use the same release version and signer.
+
+804.1.5 signed downloads: ARM64 17.2 MB; ARM32 16.5 MB; universal 40.2 MB.
