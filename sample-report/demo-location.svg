@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-labelledby="title desc">
+<title id="title">Fictional GPS sample: three numbered points</title>
+<desc id="desc">An illustrative street map with invented GPS fixes at 00:00, 00:30 and 01:00. Circles illustrate reported accuracy. The connecting line does not establish the travel path. Geography is schematic, not a real street map.</desc>
+<rect width="1000" height="600" fill="#edf1ed"/>
+<g fill="#e0e7df" stroke="#d1dbd1" stroke-width="2">
+<rect x="22" y="130" width="155" height="150" rx="16"/><rect x="27" y="310" width="140" height="185" rx="16"/>
+<rect x="218" y="80" width="160" height="175" rx="16"/><rect x="424" y="70" width="140" height="115" rx="16"/>
+<rect x="565" y="365" width="145" height="155" rx="16"/><rect x="765" y="255" width="200" height="130" rx="16"/>
+<rect x="770" y="420" width="185" height="110" rx="16"/>
+</g>
+<path d="M-20 465 Q90 415 105 540 T305 650" stroke="#c7e0e5" stroke-width="65" fill="none"/>
+<path d="M335 320 L398 260 L598 266 L620 402 L530 460 L399 430Z" fill="#d2e4cc" stroke="#bcd4b7" stroke-width="2"/>
+<g stroke="#fff" stroke-width="30" fill="none" stroke-linecap="round">
+<path d="M190 -20 L190 630"/><path d="M-20 290 L1000 290"/><path d="M720 -20 L720 630"/>
+<path d="M205 635 Q235 515 310 445 L475 305 Q575 235 695 155 L850 40"/>
+</g>
+<path d="M286.4,467.0 L476.3,300.0 L713.6,133.0" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<path d="M286.4,467.0 L476.3,300.0 L713.6,133.0" fill="none" stroke="#116b60" stroke-width="6" stroke-dasharray="10 8" stroke-linecap="round"/>
+<g font-family="system-ui,-apple-system,Arial,sans-serif">
+<text x="450" y="370" text-anchor="middle" font-size="18" fill="#5e7b54">Demo park</text>
+<rect x="22" y="20" width="350" height="74" rx="12" fill="#fff" fill-opacity=".96"/>
+<text x="42" y="51" font-size="23" font-weight="650" fill="#173027">Example GPS points</text>
+<text x="42" y="76" font-size="16" fill="#5c6c64">Fictional locations · schematic map</text>
+<circle cx="286.4" cy="467.0" r="40" fill="#116b60" fill-opacity=".09" stroke="#116b60" stroke-opacity=".18" stroke-dasharray="5 5"/><circle cx="286.4" cy="467.0" r="26" fill="#116b60" stroke="#fff" stroke-width="5"/><text x="286.4" y="475.0" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">1</text><circle cx="476.3" cy="300.0" r="50" fill="#116b60" fill-opacity=".09" stroke="#116b60" stroke-opacity=".18" stroke-dasharray="5 5"/><circle cx="476.3" cy="300.0" r="26" fill="#116b60" stroke="#fff" stroke-width="5"/><text x="476.3" y="308.0" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">2</text><circle cx="713.6" cy="133.0" r="35" fill="#116b60" fill-opacity=".09" stroke="#116b60" stroke-opacity=".18" stroke-dasharray="5 5"/><circle cx="713.6" cy="133.0" r="26" fill="#116b60" stroke="#fff" stroke-width="5"/><text x="713.6" y="141.0" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">3</text>
+<g transform="translate(940 58)"><path d="M0 12 L-12 48 L0 41 L12 48Z" fill="#173027"/><text x="0" y="0" text-anchor="middle" font-size="17" fill="#173027">N</text></g>
+<rect x="22" y="540" width="285" height="42" rx="8" fill="#fff" fill-opacity=".95"/>
+<path d="M40 552 V565 H165 V552" fill="none" stroke="#173027" stroke-width="3"/><text x="187" y="568" font-size="17" fill="#173027">25 m</text>
+<rect x="592" y="545" width="386" height="37" rx="8" fill="#fff" fill-opacity=".95"/><text x="610" y="569" font-size="15" fill="#5c6c64">Line joins samples; travel path unknown.</text>
+</g></svg>

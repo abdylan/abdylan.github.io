@@ -95,3 +95,13 @@ body{background:#fff}
 
 .language{font:inherit;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--accent);padding:10px 12px;min-height:44px;cursor:pointer}
 .save-area{display:flex;align-items:center;gap:12px}
+.sample-map{max-height:none;border:1px solid var(--line);background:var(--surface)}
+.gps-layout{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(235px,1fr);gap:16px;align-items:start}.map-link{display:block;min-width:0}.gps-fixes{list-style:none;display:grid;gap:12px;margin:12px 0;padding:0}
+.gps-fixes li{display:flex;gap:10px;padding:12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);min-width:0}
+.gps-number{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;flex:none}
+.gps-fixes strong,.gps-fixes bdi,.gps-fixes small{display:block;font-size:13px;font-variant-numeric:tabular-nums}
+.gps-fixes bdi{overflow-wrap:anywhere;margin-block:3px}
+.gps-fixes small{color:var(--muted);font-size:12px}
+.location-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:13px}
+.location-footer a{flex:none;min-height:44px;display:inline-flex;align-items:center}
+@media(max-width:760px){.gps-layout{grid-template-columns:1fr;gap:0}.gps-fixes{grid-template-columns:1fr;gap:8px}.location-footer{display:block}.gps-fixes li>div{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;width:100%;align-items:center}.gps-fixes bdi{grid-column:1/-1;grid-row:2}.gps-fixes small{text-align:end}}

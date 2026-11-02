@@ -94,3 +94,9 @@ The guide was shortened on 2 November: sections 3–5 now use brief installation
 steps, data-size cards and preparation checks. Unidentified browsers also show the
 unmatched-phone action immediately, with a one-tap make/model selector. Universal
 remains available and model-based matches remain estimates.
+
+
+The fictional report sample now shows three numbered GPS fixes on an illustrative
+map, with times, coordinates and accuracy. The demo ZIP includes the same map and
+GPS CSV. All sample locations and geography are fictional; the map makes no
+third-party requests and does not access real evidence or device location.
