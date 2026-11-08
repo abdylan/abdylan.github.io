@@ -1,0 +1,162 @@
+{
+  "revision": "2026-11-08.1",
+  "effectiveDate": "2026-11-08",
+  "appName": "Evidence Recorder",
+  "operator": "Evidence Recorder",
+  "contactEmail": "kill-switch@zehni-mareez.xyz",
+  "publicUrl": "https://abdylan.github.io/privacy.html",
+  "sections": [
+    {
+      "id": "section-1",
+      "title": {
+        "en": "Purpose and operator",
+        "ur": "مقصد اور منتظم"
+      },
+      "body": {
+        "en": [
+          "Evidence Recorder is a personal-safety recorder for invited adults aged 18 and over, operated as a personal service for a small trusted group. A private invitation is required to connect a phone. It records encounters started by the phone user and preserves available evidence. It is not a certified emergency service and cannot guarantee uninterrupted capture, successful uploads, or recipient delivery.",
+          "Privacy contact: kill-switch@zehni-mareez.xyz. The service administrator is identified in the app’s recipient disclosure."
+        ],
+        "ur": [
+          "یہ سروس صرف 18 سال یا اس سے زیادہ عمر کے بالغ افراد کے لیے ہے۔ فون کو منسلک کرنے کے لیے نجی دعوت ضروری ہے۔",
+          "Evidence Recorder ایک ذاتی حفاظتی ریکارڈر ہے جو ایک چھوٹے قابل اعتماد گروہ کے لیے ذاتی سروس کے طور پر چلایا جاتا ہے۔ فون استعمال کرنے والا ریکارڈنگ شروع کرتا ہے اور ایپ دستیاب ثبوت محفوظ کرتی ہے۔ یہ مصدقہ ہنگامی سروس نہیں؛ مسلسل ریکارڈنگ، کامیاب اپ لوڈ یا وصول کنندہ تک پہنچنے کی ضمانت نہیں۔",
+          "رازداری کے لیے رابطہ: kill-switch@zehni-mareez.xyz۔ سروس کے منتظم کی شناخت ایپ کی وصول کنندگان کی وضاحت میں دکھائی جاتی ہے۔"
+        ]
+      }
+    },
+    {
+      "id": "section-2",
+      "title": {
+        "en": "Information collected",
+        "ur": "جمع کی جانے والی معلومات"
+      },
+      "body": {
+        "en": [
+          "Recordings may contain camera video, microphone audio, and information about people or surroundings captured by the user. During an active recording the app also saves available location, times, accuracy and missing-location states, clip identifiers, sizes, checksums, capture coverage and transfer status.",
+          "Connecting a phone sends its manufacturer/model, invitation and device identity, and any optional device name/city entered for support. Saved recipient email addresses, sharing delay, retention choices and session-control settings are sent to the service. Optional recording names and notes remain on the phone.",
+          "Service operations use request identifiers, timestamps, error/status metadata and evidence-download request records. Invitation abuse protection uses a digest of the connecting IP address. Network and hosting providers necessarily process connection information such as IP addresses."
+        ],
+        "ur": [
+          "ریکارڈنگ میں کیمرے کی ویڈیو، مائیکروفون کی آواز اور صارف کے ریکارڈ کردہ لوگوں یا ماحول کی معلومات ہو سکتی ہیں۔ جاری ریکارڈنگ کے دوران ایپ دستیاب مقام، وقت، درستگی، نامعلوم مقام کی حالت، کلپ کی شناخت، حجم، چیک سم، کیپچر کی کوریج اور منتقلی کی حالت بھی محفوظ کرتی ہے۔",
+          "فون منسلک کرتے وقت کمپنی، ماڈل، دعوت اور فون کی شناخت، نیز مدد کے لیے دیا گیا اختیاری نام یا شہر سروس کو بھیجا جاتا ہے۔ وصول کنندگان کی ای میل، شیئرنگ کا وقفہ، محفوظ رکھنے کے انتخاب اور سیشن کی ترتیبات سرور کو جاتی ہیں۔ اختیاری ریکارڈنگ نام اور نوٹس فون پر رہتے ہیں۔",
+          "سروس درخواست کی شناخت، وقت، خرابی یا حالت اور ثبوت ڈاؤن لوڈ کی درخواست کا ریکارڈ استعمال کرتی ہے۔ دعوت کے غلط استعمال سے بچاؤ کے لیے رابطہ کرنے والے IP پتے کا ہیش استعمال ہوتا ہے۔ نیٹ ورک اور ہوسٹنگ فراہم کنندگان رابطے کی معلومات، مثلاً IP پتہ، بھی پراسیس کرتے ہیں۔"
+        ]
+      }
+    },
+    {
+      "id": "section-3",
+      "title": {
+        "en": "Recording, location and permissions",
+        "ur": "ریکارڈنگ، مقام اور اجازتیں"
+      },
+      "body": {
+        "en": [
+          "Capture starts from the visible, unlocked app after permission and disclosure choices. During normal screen lock or while the app is minimized, video continues for the selected 10–30-minute phase, then audio continues through silence until 10% battery or an earlier stop. Unlock the phone to stop. Android camera/microphone indicators and system controls remain in effect.",
+          "Location is collected during capture, including the audio-only phase, to attach an available route and location history to evidence. The first fresh fix and qualifying movements are saved; unavailable or stale positions are marked rather than invented. The app does not start a new camera or microphone recording on boot.",
+          "Camera/microphone, precise location and notification permissions have separate explanations. Denial can prevent dependent features; the current capture flow requires camera, microphone and precise-location permission and enabled location services. Android force-stop, power loss, low storage and other interruptions can stop recording."
+        ],
+        "ur": [
+          "اجازت اور وضاحت قبول کرنے کے بعد کھلی اور غیر مقفل ایپ سے کیپچر شروع ہوتا ہے۔ عام اسکرین لاک یا ایپ پس منظر میں ہونے پر منتخب ۱۰–۳۰ منٹ ویڈیو جاری رہتی ہے، پھر خاموشی میں بھی آواز ۱۰٪ بیٹری یا پہلے توقف تک جاری رہتی ہے۔ روکنے کے لیے فون کھولیں۔ اینڈرائیڈ کے کیمرہ اور مائیک کے اشارے اور سسٹم کنٹرول برقرار رہتے ہیں۔",
+          "ثبوت کے ساتھ دستیاب راستہ اور مقام کی تاریخ شامل کرنے کے لیے کیپچر اور صرف آواز کے مرحلے میں مقام جمع ہوتا ہے۔ پہلا تازہ مقام اور مقررہ معیار کی حرکت محفوظ ہوتی ہے؛ غیر دستیاب یا پرانا مقام فرض نہیں کیا جاتا۔ ری بوٹ پر کیمرہ یا مائیک کی نئی ریکارڈنگ شروع نہیں ہوتی۔",
+          "کیمرہ، مائیک، درست مقام اور اطلاعات کی اجازتوں کی الگ وضاحت ہے۔ انکار سے متعلقہ خصوصیات دستیاب نہیں ہوتیں؛ موجودہ ریکارڈنگ کے لیے کیمرہ، مائیک، درست مقام اور مقام کی سروس درکار ہیں۔ زبردستی بندش، بجلی، کم اسٹوریج یا دوسرے تعطل ریکارڈنگ روک سکتے ہیں۔"
+        ]
+      }
+    },
+    {
+      "id": "section-4",
+      "title": {
+        "en": "Cloud processing and service providers",
+        "ur": "کلاؤڈ پراسیسنگ اور فراہم کنندگان"
+      },
+      "body": {
+        "en": [
+          "Finalized video/audio clips and location records upload over HTTPS to private AWS storage for verification, recovery, report/ZIP generation and combined-video preparation. After the video phase, an on-device speech detector selects buffered audio segments for upload; complete audio remains local while retained. Speech selection is not a promise that every relevant sound is uploaded.",
+          "AWS hosts storage and backend processing; the configured service region is Sydney (ap-southeast-2). AWS location/map services may process evidence coordinates to prepare optional map attachments. Resend processes recipient addresses and message/report content for email delivery and delivery-status events. These providers may process data in other locations under their own service terms.",
+          "This app build includes no advertising or advertising-analytics SDK. Evidence is not sold or used for advertising. Enrollment secrets are protected with Android Keystore and are not included in public reports. Cloud storage is private and encrypted at rest, but this is not end-to-end encryption: the service operator and authorized service infrastructure can process stored evidence."
+        ],
+        "ur": [
+          "مکمل ویڈیو، آواز اور مقام کے ریکارڈ HTTPS سے نجی AWS اسٹوریج پر تصدیق، بحالی، رپورٹ، ZIP اور مشترکہ ویڈیو بنانے کے لیے اپ لوڈ ہوتے ہیں۔ ویڈیو کے بعد فون پر تقریر جانچنے والا ماڈل منتخب آڈیو حصے اپ لوڈ کے لیے چنتا ہے؛ مکمل آواز دستیاب رہنے تک مقامی طور پر محفوظ رہتی ہے۔ ہر اہم آواز اپ لوڈ ہونے کی ضمانت نہیں۔",
+          "AWS اسٹوریج اور سرور پراسیسنگ مہیا کرتا ہے؛ ترتیب شدہ علاقہ سڈنی ہے۔ اختیاری نقشے بنانے کے لیے AWS کی مقام اور نقشہ سروس ثبوت کے مقامات پراسیس کر سکتی ہے۔ Resend وصول کنندگان کے پتے، پیغام اور رپورٹ کا مواد ای میل اور ترسیل کی حالت کے لیے پراسیس کرتا ہے۔ فراہم کنندگان اپنی شرائط کے تحت دوسرے علاقوں میں بھی معلومات پراسیس کر سکتے ہیں۔",
+          "اس ایپ میں اشتہار یا اشتہاری تجزیے کا SDK شامل نہیں۔ ثبوت فروخت یا اشتہارات کے لیے استعمال نہیں ہوتے۔ اندراج کے راز Android Keystore سے محفوظ ہیں اور عوامی رپورٹ میں شامل نہیں۔ کلاؤڈ نجی اور ذخیرے میں رمز بند ہے، مگر یہ اینڈ ٹو اینڈ رمز بندی نہیں؛ منتظم اور مجاز سروس ثبوت پراسیس کر سکتے ہیں۔"
+        ]
+      }
+    },
+    {
+      "id": "section-5",
+      "title": {
+        "en": "Recipients and automatic release",
+        "ur": "وصول کنندگان اور خودکار شیئرنگ"
+      },
+      "body": {
+        "en": [
+          "For new automatic-email sessions, the server includes the administrator at abdylan93@gmail.com along with personal recipients you save. If you add no personal address, the administrator still receives the release. The app identifies that destination and asks for agreement before new sharing is armed. Historical sessions keep the recipients frozen when they were created.",
+          "A server-confirmed timer can start after video cutoff, confirmed stop or detected interruption. Eligible releases send evidence access to the frozen recipients after the saved delay and processing. The explicit setup demo sends a real test without the normal release delay. Later evidence can produce follow-up reports.",
+          "Recipients receive expiring access links and may receive location/map attachments. Anyone given a forwarded access link can use it until it expires. Recipients can download or retain evidence and attachments beyond link expiry. The operator cannot recall copies already received. Provider acceptance or delivery events do not prove that a person read the message."
+        ],
+        "ur": [
+          "نئی خودکار ای میل نشستوں میں سرور آپ کے محفوظ ذاتی وصول کنندگان کے ساتھ منتظم abdylan93@gmail.com کو شامل کرتا ہے۔ ذاتی پتہ نہ ہو تب بھی منتظم کو ثبوت بھیجے جاتے ہیں۔ نئی شیئرنگ فعال ہونے سے پہلے ایپ یہ پتہ دکھا کر رضامندی لیتی ہے۔ پرانی نشستوں کے وصول کنندگان اپنی اصل فہرست رکھتے ہیں۔",
+          "سرور سے تصدیق شدہ ٹائمر ویڈیو ختم ہونے، تصدیق شدہ بندش یا تعطل پر شروع ہو سکتا ہے۔ مقررہ وقفے اور پراسیسنگ کے بعد اہل ثبوت مقررہ وصول کنندگان کو جاتے ہیں۔ واضح سیٹ اپ ٹیسٹ عام وقفے کے بغیر حقیقی آزمائشی ای میل بھیجتا ہے۔ بعد کے ثبوت پر نئی رپورٹ بھی آ سکتی ہے۔",
+          "وصول کنندگان کو محدود مدت کے رسائی لنک اور ممکنہ مقام یا نقشے کے منسلکات ملتے ہیں۔ آگے بھیجا گیا لنک مدت تک کوئی بھی استعمال کر سکتا ہے۔ وصول کنندہ لنک ختم ہونے کے بعد بھی ڈاؤن لوڈ یا منسلکات رکھ سکتا ہے؛ منتظم موصول شدہ نقل واپس نہیں لے سکتا۔ ترسیل کی رپورٹ پڑھنے کا ثبوت نہیں۔"
+        ]
+      }
+    },
+    {
+      "id": "deletion",
+      "title": {
+        "en": "Retention and deletion",
+        "ur": "محفوظ رکھنا اور حذف کرنا"
+      },
+      "body": {
+        "en": [
+          "Pending or conflicting local originals are retained for upload/recovery. Verified originals can be pruned from the phone under storage management. Downloaded combined videos saved to Downloads may remain outside the app; manage those copies separately.",
+          "New canceled, unprotected sessions normally become eligible for cloud-media deletion seven days after cancellation, unless a saved 30-day or keep/protection choice applies. Deletion is scheduled and can be delayed. Canceling scheduled sharing does not immediately delete evidence. Metadata can remain after media deletion.",
+          "Released evidence becomes eligible for Glacier archival after 30 days. Archival is not deletion, and there is no in-app archive restore interface. Kept, protected or released evidence has no general automatic deletion deadline in the current policy. Operational log groups are configured for seven-day retention; other session/control records and provider records have separate lifetimes.",
+          "To request access, correction, disconnection or deletion of your device/account information and associated evidence, email kill-switch@zehni-mareez.xyz with “Evidence Recorder privacy request”. Give your phone’s support name or other non-secret identifying information. Never send enrollment credentials, invitation codes, private access links or sensitive media in the request. We review the request, verify authority and explain the deletion scope and any legitimate retention limits."
+        ],
+        "ur": [
+          "زیر التوا یا متضاد اصل فائلیں اپ لوڈ اور بحالی کے لیے محفوظ رہتی ہیں۔ تصدیق شدہ اصل فائلیں اسٹوریج انتظام سے فون سے ہٹ سکتی ہیں۔ Downloads میں محفوظ مشترکہ ویڈیو ایپ سے باہر رہ سکتی ہے؛ ایسی نقل الگ سنبھالیں۔",
+          "نئی منسوخ اور غیر محفوظ نشستیں عام طور پر منسوخی کے سات دن بعد کلاؤڈ میڈیا حذف کرنے کے لیے اہل ہوتی ہیں، سوائے محفوظ ۳۰ دن، ہمیشہ رکھنے یا تحفظ کے انتخاب کے۔ حذف شیڈول سے ہوتا ہے اور تاخیر ہو سکتی ہے۔ شیئرنگ منسوخ کرنے سے ثبوت فوراً حذف نہیں ہوتے۔ میڈیا حذف ہونے کے بعد کچھ میٹا ڈیٹا رہ سکتا ہے۔",
+          "جاری شدہ ثبوت ۳۰ دن بعد Glacier آرکائیو کے لیے اہل ہوتے ہیں۔ آرکائیو حذف کرنا نہیں اور ایپ میں واپس لانے کی سہولت نہیں۔ محفوظ، تحفظ شدہ یا جاری ثبوت کے لیے عمومی خودکار حذف کی آخری تاریخ نہیں۔ عملی لاگ گروپ سات دن کے لیے ترتیب شدہ ہیں؛ سیشن، کنٹرول اور فراہم کنندہ کے ریکارڈ کی الگ مدت ہے۔",
+          "فون یا اکاؤنٹ اور ثبوت تک رسائی، درستگی، رابطہ ختم یا حذف کی درخواست کے لیے kill-switch@zehni-mareez.xyz کو “Evidence Recorder privacy request” کے عنوان سے لکھیں۔ فون کا مدد والا نام یا غیر خفیہ شناخت دیں۔ راز، دعوتی کوڈ، نجی لنک یا حساس میڈیا نہ بھیجیں۔ ہم اختیار کی تصدیق کرکے درخواست، حذف کی حد اور جائز محفوظ رکھنے کی وجوہات واضح کرتے ہیں۔"
+        ]
+      }
+    },
+    {
+      "id": "section-7",
+      "title": {
+        "en": "Your choices and service limits",
+        "ur": "آپ کے انتخاب اور سروس کی حدود"
+      },
+      "body": {
+        "en": [
+          "You can decline disclosures, manage Android permissions, choose future recipients/delay/retention, stop recording after unlocking, and request cancellation of an eligible scheduled release. A cancellation takes effect only after server acknowledgement and before its deadline. Already committed or delivered releases cannot be recalled.",
+          "Declining a new disclosure prevents its dependent new action; it does not erase existing evidence, cancel an existing timer, or change a historical session. Previously authorized upload recovery can continue. Revoke Android permissions/settings to restrict device access, and contact the operator about existing cloud data.",
+          "Do not uninstall or clear app data while evidence is pending: this can remove local-only recordings and credentials. No remote timer exists for a new offline session until the server acknowledges arming. Recording and delivery depend on device power, storage, network, Android restrictions and service availability."
+        ],
+        "ur": [
+          "آپ وضاحت سے انکار، اینڈرائیڈ اجازتیں، آئندہ وصول کنندگان، وقفہ اور محفوظ رکھنے کے انتخاب بدل سکتے ہیں؛ فون کھول کر ریکارڈنگ روک سکتے ہیں؛ اہل مقررہ شیئرنگ منسوخ کرنے کی درخواست دے سکتے ہیں۔ منسوخی سرور کی تصدیق اور آخری وقت سے پہلے مؤثر ہے۔ بھیجنے کے لیے حتمی یا موصولہ پیغام واپس نہیں آ سکتا۔",
+          "نئی وضاحت سے انکار متعلقہ نیا عمل روکتا ہے؛ موجود ثبوت، ٹائمر یا پرانی نشست نہیں بدلتا۔ پہلے مجاز اپ لوڈ کی بحالی جاری رہ سکتی ہے۔ فون کی رسائی اینڈرائیڈ ترتیبات سے محدود کریں اور کلاؤڈ کے موجود ڈیٹا کے لیے منتظم سے رابطہ کریں۔",
+          "ثبوت زیر التوا ہوں تو ایپ حذف یا ڈیٹا صاف نہ کریں؛ مقامی ریکارڈنگ اور رسائی کے راز ضائع ہو سکتے ہیں۔ نئی آف لائن نشست کا ٹائمر سرور کی تصدیق سے پہلے نہیں ہوتا۔ ریکارڈنگ اور ترسیل بجلی، اسٹوریج، نیٹ ورک، اینڈرائیڈ پابندیوں اور سروس پر منحصر ہیں۔"
+        ]
+      }
+    },
+    {
+      "id": "section-8",
+      "title": {
+        "en": "Children, changes and contact",
+        "ur": "بچے، تبدیلی اور رابطہ"
+      },
+      "body": {
+        "en": [
+          "The service is intended only for adults aged 18 and over and is not directed to children. It is for users recording their own circumstances, not secretly installing surveillance on another person’s phone. Use the app consistently with applicable recording and privacy rules.",
+          "Material changes to sensitive-data handling require an updated policy and renewed in-app agreement where applicable. The policy revision is shown below. For privacy questions or requests, contact kill-switch@zehni-mareez.xyz."
+        ],
+        "ur": [
+          "یہ سروس صرف 18 سال یا اس سے زیادہ عمر کے بالغ افراد کے لیے ہے اور بچوں کے لیے نہیں ہے۔",
+          "یہ سروس بچوں کے لیے مخصوص نہیں۔ یہ اپنے حالات ریکارڈ کرنے والے صارف کے لیے ہے، کسی دوسرے کے فون میں خفیہ نگرانی نصب کرنے کے لیے نہیں۔ متعلقہ ریکارڈنگ اور رازداری کے قواعد کے مطابق استعمال کریں۔",
+          "حساس معلومات کے استعمال میں اہم تبدیلی پر پالیسی اور جہاں ضروری ہو نئی رضامندی درکار ہے۔ پالیسی کی تاریخ نیچے ہے۔ سوال اور درخواست کے لیے kill-switch@zehni-mareez.xyz سے رابطہ کریں۔"
+        ]
+      }
+    }
+  ]
+}
