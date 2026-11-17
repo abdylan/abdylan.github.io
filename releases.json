@@ -3,6 +3,25 @@
   "packageName": "app.evidence.diagnostic",
   "releases": [
     {
+      "versionCode": 25,
+      "versionName": "804.1.10",
+      "published": true,
+      "minSdk": 30,
+      "apkUrl": "https://github.com/abdylan/abdylan.github.io/releases/download/android-804.1.10-20261117/evidence-recorder-804.1.10-release.apk",
+      "changes": {
+        "en": [
+          "Updated the app icon with the green shield and red recording dot.",
+          "Simpler recording playback and saving videos to your phone."
+        ],
+        "ur": [
+          "ایپ کے آئیکن میں سبز ڈھال اور سرخ ریکارڈنگ نشان شامل کیا گیا ہے۔",
+          "ریکارڈنگ چلانے اور فون پر ڈاؤن لوڈ کرنے کی موجودہ بہتریاں بھی شامل ہیں۔"
+        ]
+      },
+      "apkBytes": 40417947,
+      "apkSha256": "862fc7f6b3806602e52ea9b38a5742a7231795370099f0e9a5d4e3cba7d41d04"
+    },
+    {
       "versionCode": 22,
       "versionName": "804.1.7",
       "published": true,
